@@ -1,0 +1,1 @@
+export default{async fetch(request,env){const url=new URL(request.url);if(url.pathname==='/')url.pathname='/analysis-hub.html';const assets=env?.ASSETS||globalThis.__WNBL_ASSETS;return assets.fetch(new Request(url,request))}}
