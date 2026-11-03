@@ -1,0 +1,1217 @@
+season,game_id,team_id,team,kills,had_kill,won
+2022-23,1022084,team_c51f6c2fb8,Geelong Venom,8,True,False
+2022-23,1022084,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2022-23,1022085,team_c51f6c2fb8,Geelong Venom,10,True,True
+2022-23,1022085,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2022-23,1022086,team_e49084a18e,Perth Lynx,7,True,False
+2022-23,1022086,team_626dba9359,Townsville Fire,7,True,True
+2022-23,1022087,team_626dba9359,Townsville Fire,6,True,True
+2022-23,1022087,team_e49084a18e,Perth Lynx,3,True,False
+2022-23,1023067,team_c51f6c2fb8,Geelong Venom,8,True,False
+2022-23,1023067,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2022-23,1023922,team_626dba9359,Townsville Fire,10,True,True
+2022-23,1023922,team_9428352aca,Southside Melbourne Flyers,2,True,False
+2022-23,1024799,team_626dba9359,Townsville Fire,7,True,True
+2022-23,1024799,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2023-24,1067504,team_f8bd570511,Bendigo Spirit,10,True,True
+2023-24,1067504,team_454fef3ef9,Adelaide Lightning,11,True,False
+2023-24,1067506,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2023-24,1067506,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1067539,team_f8bd570511,Bendigo Spirit,8,True,True
+2023-24,1067539,team_4582b92893,University of Canberra Capitals,4,True,False
+2023-24,1067540,team_d331fde894,Sydney Flames,5,True,True
+2023-24,1067540,team_e49084a18e,Perth Lynx,5,True,False
+2023-24,1067769,team_f8bd570511,Bendigo Spirit,12,True,True
+2023-24,1067769,team_454fef3ef9,Adelaide Lightning,6,True,False
+2023-24,1067773,team_c51f6c2fb8,Geelong Venom,6,True,False
+2023-24,1067773,team_626dba9359,Townsville Fire,9,True,True
+2023-24,1067821,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2023-24,1067821,team_454fef3ef9,Adelaide Lightning,6,True,False
+2023-24,1067822,team_f8bd570511,Bendigo Spirit,4,True,True
+2023-24,1067822,team_c51f6c2fb8,Geelong Venom,7,True,False
+2023-24,1067904,team_c51f6c2fb8,Geelong Venom,5,True,True
+2023-24,1067904,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1068553,team_e49084a18e,Perth Lynx,4,True,False
+2023-24,1068553,team_626dba9359,Townsville Fire,9,True,True
+2023-24,1069263,team_c51f6c2fb8,Geelong Venom,9,True,True
+2023-24,1069263,team_e49084a18e,Perth Lynx,5,True,False
+2023-24,1069552,team_c51f6c2fb8,Geelong Venom,5,True,False
+2023-24,1069552,team_d331fde894,Sydney Flames,12,True,True
+2023-24,1069620,team_454fef3ef9,Adelaide Lightning,4,True,False
+2023-24,1069620,team_e49084a18e,Perth Lynx,5,True,True
+2023-24,1069621,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2023-24,1069621,team_626dba9359,Townsville Fire,7,True,False
+2023-24,1070043,team_f8bd570511,Bendigo Spirit,3,True,False
+2023-24,1070043,team_626dba9359,Townsville Fire,7,True,True
+2023-24,1070045,team_d331fde894,Sydney Flames,9,True,False
+2023-24,1070045,team_c51f6c2fb8,Geelong Venom,12,True,True
+2023-24,1070177,team_d331fde894,Sydney Flames,7,True,True
+2023-24,1070177,team_f8bd570511,Bendigo Spirit,4,True,False
+2023-24,1071626,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2023-24,1071626,team_f8bd570511,Bendigo Spirit,7,True,False
+2023-24,1072668,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2023-24,1072668,team_4582b92893,University of Canberra Capitals,3,True,False
+2023-24,1077363,team_d331fde894,Sydney Flames,6,True,True
+2023-24,1077363,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2023-24,1077373,team_d331fde894,Sydney Flames,9,True,False
+2023-24,1077373,team_454fef3ef9,Adelaide Lightning,10,True,True
+2023-24,1077436,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2023-24,1077436,team_c51f6c2fb8,Geelong Venom,6,True,True
+2023-24,1077437,team_f8bd570511,Bendigo Spirit,10,True,False
+2023-24,1077437,team_626dba9359,Townsville Fire,5,True,True
+2023-24,1077494,team_f8bd570511,Bendigo Spirit,8,True,True
+2023-24,1077494,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1077495,team_e49084a18e,Perth Lynx,7,True,False
+2023-24,1077495,team_f8bd570511,Bendigo Spirit,10,True,True
+2023-24,1077496,team_626dba9359,Townsville Fire,5,True,False
+2023-24,1077496,team_454fef3ef9,Adelaide Lightning,8,True,True
+2023-24,1077498,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2023-24,1077498,team_d331fde894,Sydney Flames,3,True,False
+2023-24,1077511,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2023-24,1077511,team_e49084a18e,Perth Lynx,6,True,False
+2023-24,1077521,team_d331fde894,Sydney Flames,7,True,False
+2023-24,1077521,team_e49084a18e,Perth Lynx,6,True,True
+2023-24,1077991,team_c51f6c2fb8,Geelong Venom,10,True,False
+2023-24,1077991,team_454fef3ef9,Adelaide Lightning,8,True,True
+2023-24,1077992,team_c51f6c2fb8,Geelong Venom,11,True,True
+2023-24,1077992,team_626dba9359,Townsville Fire,5,True,False
+2023-24,1077993,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2023-24,1077993,team_626dba9359,Townsville Fire,6,True,False
+2023-24,1077994,team_4582b92893,University of Canberra Capitals,3,True,False
+2023-24,1077994,team_d331fde894,Sydney Flames,7,True,True
+2023-24,1077995,team_454fef3ef9,Adelaide Lightning,8,True,True
+2023-24,1077995,team_4582b92893,University of Canberra Capitals,9,True,False
+2023-24,1077996,team_e49084a18e,Perth Lynx,7,True,True
+2023-24,1077996,team_454fef3ef9,Adelaide Lightning,6,True,False
+2023-24,1077997,team_e49084a18e,Perth Lynx,8,True,True
+2023-24,1077997,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1077998,team_e49084a18e,Perth Lynx,6,True,False
+2023-24,1077998,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2023-24,1077999,team_454fef3ef9,Adelaide Lightning,10,True,True
+2023-24,1077999,team_c51f6c2fb8,Geelong Venom,8,True,False
+2023-24,1078000,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2023-24,1078000,team_e49084a18e,Perth Lynx,7,True,True
+2023-24,1078001,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2023-24,1078001,team_4582b92893,University of Canberra Capitals,8,True,True
+2023-24,1078002,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2023-24,1078002,team_454fef3ef9,Adelaide Lightning,10,True,True
+2023-24,1078003,team_4582b92893,University of Canberra Capitals,2,True,False
+2023-24,1078003,team_f8bd570511,Bendigo Spirit,6,True,True
+2023-24,1078004,team_626dba9359,Townsville Fire,3,True,False
+2023-24,1078004,team_f8bd570511,Bendigo Spirit,11,True,True
+2023-24,1078005,team_f8bd570511,Bendigo Spirit,6,True,True
+2023-24,1078005,team_454fef3ef9,Adelaide Lightning,7,True,False
+2023-24,1078006,team_e49084a18e,Perth Lynx,9,True,True
+2023-24,1078006,team_f8bd570511,Bendigo Spirit,4,True,False
+2023-24,1078007,team_454fef3ef9,Adelaide Lightning,4,True,False
+2023-24,1078007,team_d331fde894,Sydney Flames,10,True,True
+2023-24,1078008,team_e49084a18e,Perth Lynx,5,True,False
+2023-24,1078008,team_626dba9359,Townsville Fire,6,True,True
+2023-24,1078009,team_f8bd570511,Bendigo Spirit,8,True,True
+2023-24,1078009,team_d331fde894,Sydney Flames,6,True,False
+2023-24,1078010,team_d331fde894,Sydney Flames,7,True,True
+2023-24,1078010,team_626dba9359,Townsville Fire,9,True,False
+2023-24,1078011,team_454fef3ef9,Adelaide Lightning,9,True,False
+2023-24,1078011,team_c51f6c2fb8,Geelong Venom,10,True,True
+2023-24,1078012,team_c51f6c2fb8,Geelong Venom,8,True,True
+2023-24,1078012,team_626dba9359,Townsville Fire,7,True,False
+2023-24,1078013,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2023-24,1078013,team_c51f6c2fb8,Geelong Venom,3,True,False
+2023-24,1078014,team_d331fde894,Sydney Flames,8,True,False
+2023-24,1078014,team_626dba9359,Townsville Fire,10,True,True
+2023-24,1078015,team_c51f6c2fb8,Geelong Venom,3,True,False
+2023-24,1078015,team_4582b92893,University of Canberra Capitals,7,True,True
+2023-24,1078016,team_4582b92893,University of Canberra Capitals,5,True,False
+2023-24,1078016,team_626dba9359,Townsville Fire,12,True,True
+2023-24,1078017,team_e49084a18e,Perth Lynx,7,True,False
+2023-24,1078017,team_c51f6c2fb8,Geelong Venom,11,True,True
+2023-24,1078018,team_4582b92893,University of Canberra Capitals,4,True,False
+2023-24,1078018,team_626dba9359,Townsville Fire,6,True,True
+2023-24,1078019,team_f8bd570511,Bendigo Spirit,6,True,False
+2023-24,1078019,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2023-24,1078020,team_454fef3ef9,Adelaide Lightning,6,True,False
+2023-24,1078020,team_e49084a18e,Perth Lynx,10,True,True
+2023-24,1078021,team_626dba9359,Townsville Fire,12,True,True
+2023-24,1078021,team_454fef3ef9,Adelaide Lightning,6,True,False
+2023-24,1078022,team_d331fde894,Sydney Flames,5,True,True
+2023-24,1078022,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1078023,team_454fef3ef9,Adelaide Lightning,9,True,False
+2023-24,1078023,team_626dba9359,Townsville Fire,10,True,True
+2023-24,1078024,team_9428352aca,Southside Melbourne Flyers,11,True,False
+2023-24,1078024,team_454fef3ef9,Adelaide Lightning,11,True,True
+2023-24,1078025,team_4582b92893,University of Canberra Capitals,5,True,False
+2023-24,1078025,team_d331fde894,Sydney Flames,4,True,True
+2023-24,1078027,team_626dba9359,Townsville Fire,6,True,True
+2023-24,1078027,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2023-24,1078028,team_e49084a18e,Perth Lynx,4,True,True
+2023-24,1078028,team_4582b92893,University of Canberra Capitals,8,True,False
+2023-24,1078029,team_e49084a18e,Perth Lynx,6,True,True
+2023-24,1078029,team_f8bd570511,Bendigo Spirit,6,True,False
+2023-24,1078030,team_4582b92893,University of Canberra Capitals,9,True,False
+2023-24,1078030,team_c51f6c2fb8,Geelong Venom,8,True,True
+2023-24,1078031,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2023-24,1078031,team_f8bd570511,Bendigo Spirit,3,True,False
+2023-24,1078032,team_d331fde894,Sydney Flames,6,True,False
+2023-24,1078032,team_e49084a18e,Perth Lynx,13,True,True
+2023-24,1078033,team_c51f6c2fb8,Geelong Venom,10,True,False
+2023-24,1078033,team_f8bd570511,Bendigo Spirit,8,True,True
+2023-24,1078034,team_c51f6c2fb8,Geelong Venom,5,True,True
+2023-24,1078034,team_f8bd570511,Bendigo Spirit,8,True,False
+2023-24,1078035,team_c51f6c2fb8,Geelong Venom,7,True,False
+2023-24,1078035,team_e49084a18e,Perth Lynx,9,True,True
+2023-24,1078036,team_d331fde894,Sydney Flames,6,True,False
+2023-24,1078036,team_c51f6c2fb8,Geelong Venom,6,True,True
+2023-24,1078037,team_e49084a18e,Perth Lynx,9,True,False
+2023-24,1078037,team_4582b92893,University of Canberra Capitals,6,True,True
+2023-24,1078038,team_454fef3ef9,Adelaide Lightning,7,True,False
+2023-24,1078038,team_d331fde894,Sydney Flames,6,True,True
+2023-24,1078039,team_454fef3ef9,Adelaide Lightning,10,True,True
+2023-24,1078039,team_4582b92893,University of Canberra Capitals,7,True,False
+2023-24,1078040,team_f8bd570511,Bendigo Spirit,4,True,False
+2023-24,1078040,team_d331fde894,Sydney Flames,7,True,True
+2023-24,1078041,team_e49084a18e,Perth Lynx,3,True,False
+2023-24,1078041,team_626dba9359,Townsville Fire,8,True,True
+2023-24,1078042,team_4582b92893,University of Canberra Capitals,6,True,False
+2023-24,1078042,team_626dba9359,Townsville Fire,7,True,True
+2023-24,1078043,team_d331fde894,Sydney Flames,6,True,False
+2023-24,1078043,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2023-24,1078044,team_9428352aca,Southside Melbourne Flyers,11,True,False
+2023-24,1078044,team_c51f6c2fb8,Geelong Venom,8,True,True
+2023-24,1078045,team_4582b92893,University of Canberra Capitals,12,True,True
+2023-24,1078045,team_454fef3ef9,Adelaide Lightning,9,True,False
+2023-24,1142047,team_626dba9359,Townsville Fire,7,True,True
+2023-24,1142047,team_d331fde894,Sydney Flames,5,True,False
+2023-24,1142399,team_9428352aca,Southside Melbourne Flyers,4,True,True
+2023-24,1142399,team_c51f6c2fb8,Geelong Venom,6,True,False
+2023-24,1142561,team_626dba9359,Townsville Fire,6,True,False
+2023-24,1142561,team_e49084a18e,Perth Lynx,9,True,True
+2023-24,1142631,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2023-24,1142631,team_c51f6c2fb8,Geelong Venom,9,True,True
+2023-24,1142632,team_626dba9359,Townsville Fire,4,True,False
+2023-24,1142632,team_e49084a18e,Perth Lynx,5,True,True
+2023-24,1143867,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2023-24,1143867,team_c51f6c2fb8,Geelong Venom,1,True,False
+2023-24,1144802,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2023-24,1144802,team_e49084a18e,Perth Lynx,8,True,True
+2023-24,1145858,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2023-24,1145858,team_e49084a18e,Perth Lynx,7,True,False
+2023-24,1146339,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2023-24,1146339,team_e49084a18e,Perth Lynx,3,True,False
+2019-20,204738,team_454fef3ef9,Adelaide Lightning,9,True,True
+2019-20,204738,team_f8bd570511,Bendigo Spirit,8,True,False
+2019-20,204741,team_c51f6c2fb8,Geelong Venom,7,True,True
+2019-20,204741,team_f8bd570511,Bendigo Spirit,6,True,False
+2019-20,204743,team_d331fde894,Sydney Flames,7,True,False
+2019-20,204743,team_e49084a18e,Perth Lynx,8,True,True
+2019-20,204747,team_d331fde894,Sydney Flames,6,True,True
+2019-20,204747,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2019-20,204756,team_d331fde894,Sydney Flames,5,True,True
+2019-20,204756,team_f8bd570511,Bendigo Spirit,2,True,False
+2019-20,204760,team_454fef3ef9,Adelaide Lightning,8,True,True
+2019-20,204760,team_626dba9359,Townsville Fire,7,True,False
+2019-20,204765,team_f8bd570511,Bendigo Spirit,9,True,False
+2019-20,204765,team_d331fde894,Sydney Flames,8,True,True
+2019-20,204778,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2019-20,204778,team_e49084a18e,Perth Lynx,8,True,False
+2019-20,204779,team_f8bd570511,Bendigo Spirit,6,True,False
+2019-20,204779,team_4582b92893,University of Canberra Capitals,12,True,True
+2019-20,204783,team_c51f6c2fb8,Geelong Venom,7,True,True
+2019-20,204783,team_626dba9359,Townsville Fire,5,True,False
+2019-20,204787,team_e49084a18e,Perth Lynx,6,True,False
+2019-20,204787,team_4582b92893,University of Canberra Capitals,10,True,True
+2019-20,204788,team_454fef3ef9,Adelaide Lightning,7,True,False
+2019-20,204788,team_4582b92893,University of Canberra Capitals,9,True,True
+2019-20,204791,team_e49084a18e,Perth Lynx,6,True,True
+2019-20,204791,team_d331fde894,Sydney Flames,4,True,False
+2019-20,204793,team_c51f6c2fb8,Geelong Venom,11,True,True
+2019-20,204793,team_454fef3ef9,Adelaide Lightning,7,True,False
+2019-20,204794,team_d331fde894,Sydney Flames,5,True,False
+2019-20,204794,team_c51f6c2fb8,Geelong Venom,8,True,True
+2019-20,204796,team_d331fde894,Sydney Flames,9,True,False
+2019-20,204796,team_e49084a18e,Perth Lynx,6,True,True
+2019-20,204798,team_454fef3ef9,Adelaide Lightning,3,True,False
+2019-20,204798,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2019-20,204801,team_c51f6c2fb8,Geelong Venom,7,True,True
+2019-20,204801,team_f8bd570511,Bendigo Spirit,5,True,False
+2019-20,204804,team_f8bd570511,Bendigo Spirit,4,True,False
+2019-20,204804,team_626dba9359,Townsville Fire,7,True,True
+2019-20,204805,team_d331fde894,Sydney Flames,8,True,True
+2019-20,204805,team_454fef3ef9,Adelaide Lightning,4,True,False
+2019-20,204807,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2019-20,204807,team_d331fde894,Sydney Flames,8,True,False
+2019-20,204812,team_e49084a18e,Perth Lynx,5,True,False
+2019-20,204812,team_f8bd570511,Bendigo Spirit,2,True,True
+2019-20,204814,team_f8bd570511,Bendigo Spirit,5,True,True
+2019-20,204814,team_626dba9359,Townsville Fire,6,True,False
+2019-20,204817,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2019-20,204817,team_626dba9359,Townsville Fire,7,True,False
+2019-20,204821,team_d331fde894,Sydney Flames,5,True,True
+2019-20,204821,team_626dba9359,Townsville Fire,4,True,False
+2019-20,204822,team_f8bd570511,Bendigo Spirit,8,True,False
+2019-20,204822,team_c51f6c2fb8,Geelong Venom,10,True,True
+2019-20,204826,team_c51f6c2fb8,Geelong Venom,10,True,True
+2019-20,204826,team_4582b92893,University of Canberra Capitals,7,True,False
+2019-20,204829,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2019-20,204829,team_c51f6c2fb8,Geelong Venom,9,True,False
+2019-20,204833,team_e49084a18e,Perth Lynx,5,True,False
+2019-20,204833,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2019-20,204841,team_e49084a18e,Perth Lynx,7,True,True
+2019-20,204841,team_626dba9359,Townsville Fire,6,True,False
+2019-20,204844,team_4582b92893,University of Canberra Capitals,6,True,True
+2019-20,204844,team_626dba9359,Townsville Fire,4,True,False
+2019-20,204846,team_454fef3ef9,Adelaide Lightning,6,True,True
+2019-20,204846,team_d331fde894,Sydney Flames,6,True,False
+2019-20,204850,team_c51f6c2fb8,Geelong Venom,7,True,False
+2019-20,204850,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2019-20,204851,team_4582b92893,University of Canberra Capitals,7,True,True
+2019-20,204851,team_626dba9359,Townsville Fire,6,True,False
+2019-20,204853,team_d331fde894,Sydney Flames,3,True,False
+2019-20,204853,team_4582b92893,University of Canberra Capitals,8,True,True
+2019-20,204855,team_4582b92893,University of Canberra Capitals,8,True,True
+2019-20,204855,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2019-20,204856,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2019-20,204856,team_4582b92893,University of Canberra Capitals,9,True,False
+2019-20,204857,team_c51f6c2fb8,Geelong Venom,12,True,True
+2019-20,204857,team_454fef3ef9,Adelaide Lightning,10,True,False
+2019-20,204860,team_e49084a18e,Perth Lynx,7,True,False
+2019-20,204860,team_626dba9359,Townsville Fire,9,True,True
+2019-20,204863,team_4582b92893,University of Canberra Capitals,10,True,True
+2019-20,204863,team_f8bd570511,Bendigo Spirit,7,True,False
+2019-20,204864,team_e49084a18e,Perth Lynx,7,True,False
+2019-20,204864,team_4582b92893,University of Canberra Capitals,11,True,True
+2019-20,204865,team_454fef3ef9,Adelaide Lightning,9,True,True
+2019-20,204865,team_e49084a18e,Perth Lynx,5,True,False
+2019-20,204875,team_626dba9359,Townsville Fire,5,True,False
+2019-20,204875,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2019-20,204879,team_c51f6c2fb8,Geelong Venom,7,True,True
+2019-20,204879,team_626dba9359,Townsville Fire,8,True,False
+2019-20,204880,team_e49084a18e,Perth Lynx,7,True,False
+2019-20,204880,team_454fef3ef9,Adelaide Lightning,11,True,True
+2019-20,204881,team_d331fde894,Sydney Flames,6,True,True
+2019-20,204881,team_4582b92893,University of Canberra Capitals,7,True,False
+2019-20,204883,team_454fef3ef9,Adelaide Lightning,6,True,True
+2019-20,204883,team_f8bd570511,Bendigo Spirit,3,True,False
+2019-20,204884,team_c51f6c2fb8,Geelong Venom,9,True,False
+2019-20,204884,team_e49084a18e,Perth Lynx,8,True,True
+2019-20,204885,team_d331fde894,Sydney Flames,8,True,False
+2019-20,204885,team_626dba9359,Townsville Fire,8,True,True
+2019-20,204890,team_454fef3ef9,Adelaide Lightning,8,True,False
+2019-20,204890,team_f8bd570511,Bendigo Spirit,7,True,True
+2019-20,204891,team_4582b92893,University of Canberra Capitals,6,True,True
+2019-20,204891,team_c51f6c2fb8,Geelong Venom,6,True,False
+2019-20,204892,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2019-20,204892,team_f8bd570511,Bendigo Spirit,4,True,False
+2019-20,204894,team_4582b92893,University of Canberra Capitals,10,True,False
+2019-20,204894,team_454fef3ef9,Adelaide Lightning,13,True,True
+2019-20,204898,team_d331fde894,Sydney Flames,4,True,False
+2019-20,204898,team_454fef3ef9,Adelaide Lightning,6,True,True
+2019-20,204905,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2019-20,204905,team_f8bd570511,Bendigo Spirit,5,True,False
+2019-20,204908,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2019-20,204908,team_626dba9359,Townsville Fire,6,True,False
+2019-20,204913,team_c51f6c2fb8,Geelong Venom,10,True,True
+2019-20,204913,team_e49084a18e,Perth Lynx,7,True,False
+2024-25,2188931,team_c51f6c2fb8,Geelong Venom,4,True,False
+2024-25,2188931,team_626dba9359,Townsville Fire,7,True,True
+2024-25,2188932,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2024-25,2188932,team_e49084a18e,Perth Lynx,9,True,True
+2024-25,2188933,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188933,team_454fef3ef9,Adelaide Lightning,6,True,False
+2024-25,2188934,team_4582b92893,University of Canberra Capitals,6,True,False
+2024-25,2188934,team_d331fde894,Sydney Flames,5,True,True
+2024-25,2188935,team_e49084a18e,Perth Lynx,5,True,False
+2024-25,2188935,team_626dba9359,Townsville Fire,7,True,True
+2024-25,2188936,team_c51f6c2fb8,Geelong Venom,6,True,True
+2024-25,2188936,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2024-25,2188937,team_f8bd570511,Bendigo Spirit,7,True,True
+2024-25,2188937,team_4582b92893,University of Canberra Capitals,3,True,False
+2024-25,2188938,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2024-25,2188938,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2188939,team_e49084a18e,Perth Lynx,9,True,True
+2024-25,2188939,team_454fef3ef9,Adelaide Lightning,5,True,False
+2024-25,2188940,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2188940,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188941,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2188941,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188942,team_e49084a18e,Perth Lynx,7,True,True
+2024-25,2188942,team_4582b92893,University of Canberra Capitals,8,True,False
+2024-25,2188943,team_c51f6c2fb8,Geelong Venom,11,True,True
+2024-25,2188943,team_454fef3ef9,Adelaide Lightning,13,True,False
+2024-25,2188944,team_f8bd570511,Bendigo Spirit,7,True,True
+2024-25,2188944,team_626dba9359,Townsville Fire,5,True,False
+2024-25,2188945,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2024-25,2188945,team_4582b92893,University of Canberra Capitals,7,True,False
+2024-25,2188946,team_d331fde894,Sydney Flames,8,True,False
+2024-25,2188946,team_454fef3ef9,Adelaide Lightning,12,True,True
+2024-25,2188947,team_626dba9359,Townsville Fire,10,True,False
+2024-25,2188947,team_4582b92893,University of Canberra Capitals,7,True,True
+2024-25,2188948,team_4582b92893,University of Canberra Capitals,11,True,True
+2024-25,2188948,team_c51f6c2fb8,Geelong Venom,8,True,False
+2024-25,2188949,team_454fef3ef9,Adelaide Lightning,9,True,False
+2024-25,2188949,team_626dba9359,Townsville Fire,12,True,True
+2024-25,2188950,team_d331fde894,Sydney Flames,3,True,False
+2024-25,2188950,team_e49084a18e,Perth Lynx,10,True,True
+2024-25,2188951,team_f8bd570511,Bendigo Spirit,7,True,True
+2024-25,2188951,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2024-25,2188952,team_e49084a18e,Perth Lynx,6,True,True
+2024-25,2188952,team_626dba9359,Townsville Fire,2,True,False
+2024-25,2188953,team_626dba9359,Townsville Fire,6,True,True
+2024-25,2188953,team_454fef3ef9,Adelaide Lightning,10,True,False
+2024-25,2188954,team_d331fde894,Sydney Flames,8,True,True
+2024-25,2188954,team_c51f6c2fb8,Geelong Venom,10,True,False
+2024-25,2188955,team_f8bd570511,Bendigo Spirit,6,True,True
+2024-25,2188955,team_4582b92893,University of Canberra Capitals,6,True,False
+2024-25,2188956,team_e49084a18e,Perth Lynx,11,True,True
+2024-25,2188956,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2024-25,2188957,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2024-25,2188957,team_4582b92893,University of Canberra Capitals,6,True,False
+2024-25,2188958,team_e49084a18e,Perth Lynx,9,True,False
+2024-25,2188958,team_f8bd570511,Bendigo Spirit,11,True,True
+2024-25,2188959,team_454fef3ef9,Adelaide Lightning,9,True,True
+2024-25,2188959,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2024-25,2188960,team_d331fde894,Sydney Flames,12,True,True
+2024-25,2188960,team_e49084a18e,Perth Lynx,10,True,False
+2024-25,2188961,team_454fef3ef9,Adelaide Lightning,9,True,False
+2024-25,2188961,team_c51f6c2fb8,Geelong Venom,12,True,True
+2024-25,2188962,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2024-25,2188962,team_c51f6c2fb8,Geelong Venom,9,True,True
+2024-25,2188963,team_4582b92893,University of Canberra Capitals,9,True,False
+2024-25,2188963,team_e49084a18e,Perth Lynx,12,True,True
+2024-25,2188964,team_626dba9359,Townsville Fire,5,True,False
+2024-25,2188964,team_f8bd570511,Bendigo Spirit,7,True,True
+2024-25,2188965,team_d331fde894,Sydney Flames,11,True,True
+2024-25,2188965,team_c51f6c2fb8,Geelong Venom,9,True,False
+2024-25,2188966,team_4582b92893,University of Canberra Capitals,11,True,False
+2024-25,2188966,team_454fef3ef9,Adelaide Lightning,12,True,True
+2024-25,2188967,team_626dba9359,Townsville Fire,9,True,True
+2024-25,2188967,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2188968,team_e49084a18e,Perth Lynx,8,True,True
+2024-25,2188968,team_f8bd570511,Bendigo Spirit,10,True,False
+2024-25,2188969,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2024-25,2188969,team_454fef3ef9,Adelaide Lightning,6,True,True
+2024-25,2188970,team_626dba9359,Townsville Fire,14,True,True
+2024-25,2188970,team_4582b92893,University of Canberra Capitals,6,True,False
+2024-25,2188971,team_454fef3ef9,Adelaide Lightning,10,True,True
+2024-25,2188971,team_d331fde894,Sydney Flames,7,True,False
+2024-25,2188972,team_f8bd570511,Bendigo Spirit,4,True,False
+2024-25,2188972,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2024-25,2188973,team_e49084a18e,Perth Lynx,8,True,True
+2024-25,2188973,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2188974,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188974,team_454fef3ef9,Adelaide Lightning,6,True,False
+2024-25,2188975,team_e49084a18e,Perth Lynx,7,True,True
+2024-25,2188975,team_4582b92893,University of Canberra Capitals,5,True,False
+2024-25,2188976,team_626dba9359,Townsville Fire,12,True,True
+2024-25,2188976,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2188977,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2024-25,2188977,team_d331fde894,Sydney Flames,5,True,True
+2024-25,2188978,team_626dba9359,Townsville Fire,7,True,False
+2024-25,2188978,team_f8bd570511,Bendigo Spirit,11,True,True
+2024-25,2188979,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188979,team_d331fde894,Sydney Flames,5,True,False
+2024-25,2188980,team_454fef3ef9,Adelaide Lightning,5,True,False
+2024-25,2188980,team_4582b92893,University of Canberra Capitals,8,True,True
+2024-25,2188981,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2024-25,2188981,team_626dba9359,Townsville Fire,6,True,True
+2024-25,2188982,team_4582b92893,University of Canberra Capitals,11,True,True
+2024-25,2188982,team_c51f6c2fb8,Geelong Venom,10,True,False
+2024-25,2188983,team_454fef3ef9,Adelaide Lightning,6,True,False
+2024-25,2188983,team_e49084a18e,Perth Lynx,9,True,True
+2024-25,2188984,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2024-25,2188984,team_c51f6c2fb8,Geelong Venom,10,True,True
+2024-25,2188986,team_4582b92893,University of Canberra Capitals,8,True,True
+2024-25,2188986,team_454fef3ef9,Adelaide Lightning,6,True,False
+2024-25,2188987,team_626dba9359,Townsville Fire,8,True,True
+2024-25,2188987,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2024-25,2188988,team_c51f6c2fb8,Geelong Venom,8,True,False
+2024-25,2188988,team_e49084a18e,Perth Lynx,6,True,True
+2024-25,2188989,team_f8bd570511,Bendigo Spirit,12,True,True
+2024-25,2188989,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2188990,team_e49084a18e,Perth Lynx,8,True,False
+2024-25,2188990,team_f8bd570511,Bendigo Spirit,6,True,True
+2024-25,2188992,team_d331fde894,Sydney Flames,7,True,False
+2024-25,2188992,team_c51f6c2fb8,Geelong Venom,9,True,True
+2024-25,2188993,team_626dba9359,Townsville Fire,10,True,True
+2024-25,2188993,team_4582b92893,University of Canberra Capitals,4,True,False
+2024-25,2188994,team_e49084a18e,Perth Lynx,8,True,True
+2024-25,2188994,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2024-25,2188995,team_454fef3ef9,Adelaide Lightning,5,True,False
+2024-25,2188995,team_d331fde894,Sydney Flames,10,True,True
+2024-25,2188996,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2188996,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2188998,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2188998,team_626dba9359,Townsville Fire,7,True,True
+2024-25,2188999,team_454fef3ef9,Adelaide Lightning,9,True,False
+2024-25,2188999,team_f8bd570511,Bendigo Spirit,13,True,True
+2024-25,2189000,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2024-25,2189000,team_4582b92893,University of Canberra Capitals,9,True,True
+2024-25,2189001,team_d331fde894,Sydney Flames,7,True,False
+2024-25,2189001,team_e49084a18e,Perth Lynx,9,True,True
+2024-25,2189002,team_626dba9359,Townsville Fire,11,True,True
+2024-25,2189002,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2189003,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2189003,team_c51f6c2fb8,Geelong Venom,5,True,False
+2024-25,2189004,team_4582b92893,University of Canberra Capitals,8,True,False
+2024-25,2189004,team_d331fde894,Sydney Flames,10,True,True
+2024-25,2189005,team_626dba9359,Townsville Fire,8,True,True
+2024-25,2189005,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2024-25,2189006,team_454fef3ef9,Adelaide Lightning,8,True,True
+2024-25,2189006,team_e49084a18e,Perth Lynx,6,True,False
+2024-25,2189007,team_c51f6c2fb8,Geelong Venom,7,True,False
+2024-25,2189007,team_4582b92893,University of Canberra Capitals,9,True,True
+2024-25,2189008,team_f8bd570511,Bendigo Spirit,13,True,True
+2024-25,2189008,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2024-25,2189009,team_626dba9359,Townsville Fire,12,True,True
+2024-25,2189009,team_d331fde894,Sydney Flames,6,True,False
+2024-25,2189010,team_e49084a18e,Perth Lynx,12,True,True
+2024-25,2189010,team_c51f6c2fb8,Geelong Venom,4,True,False
+2024-25,2189011,team_4582b92893,University of Canberra Capitals,6,True,True
+2024-25,2189011,team_f8bd570511,Bendigo Spirit,6,True,False
+2024-25,2189012,team_d331fde894,Sydney Flames,5,True,False
+2024-25,2189012,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2024-25,2189013,team_454fef3ef9,Adelaide Lightning,11,True,True
+2024-25,2189013,team_c51f6c2fb8,Geelong Venom,6,True,False
+2024-25,2189014,team_e49084a18e,Perth Lynx,8,True,True
+2024-25,2189014,team_626dba9359,Townsville Fire,9,True,False
+2024-25,2231628,team_454fef3ef9,Adelaide Lightning,8,True,False
+2024-25,2231628,team_626dba9359,Townsville Fire,10,True,True
+2024-25,2232023,team_454fef3ef9,Adelaide Lightning,5,True,False
+2024-25,2232023,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2024-25,2232024,team_4582b92893,University of Canberra Capitals,5,True,False
+2024-25,2232024,team_d331fde894,Sydney Flames,11,True,True
+2024-25,2232924,team_626dba9359,Townsville Fire,6,True,True
+2024-25,2232924,team_e49084a18e,Perth Lynx,6,True,False
+2024-25,2232992,team_f8bd570511,Bendigo Spirit,8,True,True
+2024-25,2232992,team_d331fde894,Sydney Flames,8,True,False
+2024-25,2233173,team_626dba9359,Townsville Fire,10,True,True
+2024-25,2233173,team_e49084a18e,Perth Lynx,3,True,False
+2024-25,2233282,team_d331fde894,Sydney Flames,4,True,False
+2024-25,2233282,team_f8bd570511,Bendigo Spirit,9,True,True
+2024-25,2233787,team_626dba9359,Townsville Fire,10,True,False
+2024-25,2233787,team_f8bd570511,Bendigo Spirit,9,True,True
+2024-25,2239045,team_626dba9359,Townsville Fire,9,True,False
+2024-25,2239045,team_f8bd570511,Bendigo Spirit,11,True,True
+2025-26,2265439,team_d331fde894,Sydney Flames,8,True,True
+2025-26,2265439,team_c51f6c2fb8,Geelong Venom,6,True,False
+2025-26,2265441,team_4582b92893,University of Canberra Capitals,8,True,True
+2025-26,2265441,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2025-26,2265442,team_e49084a18e,Perth Lynx,11,True,True
+2025-26,2265442,team_454fef3ef9,Adelaide Lightning,8,True,False
+2025-26,2265444,team_f8bd570511,Bendigo Spirit,7,True,False
+2025-26,2265444,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2265445,team_d331fde894,Sydney Flames,5,True,False
+2025-26,2265445,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2025-26,2265446,team_c51f6c2fb8,Geelong Venom,6,True,True
+2025-26,2265446,team_454fef3ef9,Adelaide Lightning,2,True,False
+2025-26,2265447,team_4582b92893,University of Canberra Capitals,2,True,False
+2025-26,2265447,team_626dba9359,Townsville Fire,9,True,True
+2025-26,2265449,team_d331fde894,Sydney Flames,9,True,False
+2025-26,2265449,team_e49084a18e,Perth Lynx,9,True,True
+2025-26,2265450,team_c51f6c2fb8,Geelong Venom,11,True,False
+2025-26,2265450,team_f8bd570511,Bendigo Spirit,10,True,True
+2025-26,2265451,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2025-26,2265451,team_626dba9359,Townsville Fire,8,True,False
+2025-26,2265453,team_4582b92893,University of Canberra Capitals,8,True,False
+2025-26,2265453,team_454fef3ef9,Adelaide Lightning,10,True,True
+2025-26,2265454,team_e49084a18e,Perth Lynx,7,True,True
+2025-26,2265454,team_c51f6c2fb8,Geelong Venom,7,True,False
+2025-26,2265455,team_f8bd570511,Bendigo Spirit,8,True,True
+2025-26,2265455,team_d331fde894,Sydney Flames,4,True,False
+2025-26,2265456,team_626dba9359,Townsville Fire,9,True,True
+2025-26,2265456,team_e49084a18e,Perth Lynx,7,True,False
+2025-26,2302648,team_4582b92893,University of Canberra Capitals,9,True,False
+2025-26,2302648,team_d331fde894,Sydney Flames,11,True,True
+2025-26,2302649,team_c51f6c2fb8,Geelong Venom,3,True,False
+2025-26,2302649,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2302650,team_4582b92893,University of Canberra Capitals,8,True,False
+2025-26,2302650,team_f8bd570511,Bendigo Spirit,7,True,True
+2025-26,2302651,team_d331fde894,Sydney Flames,9,True,False
+2025-26,2302651,team_454fef3ef9,Adelaide Lightning,9,True,True
+2025-26,2302652,team_e49084a18e,Perth Lynx,11,True,True
+2025-26,2302652,team_9428352aca,Southside Melbourne Flyers,11,True,False
+2025-26,2302653,team_e49084a18e,Perth Lynx,5,True,False
+2025-26,2302653,team_c51f6c2fb8,Geelong Venom,5,True,True
+2025-26,2302654,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2025-26,2302654,team_c51f6c2fb8,Geelong Venom,10,True,True
+2025-26,2302655,team_4582b92893,University of Canberra Capitals,13,True,True
+2025-26,2302655,team_d331fde894,Sydney Flames,1,True,False
+2025-26,2302656,team_454fef3ef9,Adelaide Lightning,3,True,False
+2025-26,2302656,team_626dba9359,Townsville Fire,10,True,True
+2025-26,2302657,team_f8bd570511,Bendigo Spirit,6,True,False
+2025-26,2302657,team_e49084a18e,Perth Lynx,10,True,True
+2025-26,2302658,team_f8bd570511,Bendigo Spirit,8,True,True
+2025-26,2302658,team_454fef3ef9,Adelaide Lightning,8,True,False
+2025-26,2302659,team_454fef3ef9,Adelaide Lightning,6,True,True
+2025-26,2302659,team_c51f6c2fb8,Geelong Venom,5,True,False
+2025-26,2302660,team_d331fde894,Sydney Flames,5,True,False
+2025-26,2302660,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2025-26,2302661,team_4582b92893,University of Canberra Capitals,4,True,False
+2025-26,2302661,team_626dba9359,Townsville Fire,10,True,True
+2025-26,2302662,team_f8bd570511,Bendigo Spirit,10,True,True
+2025-26,2302662,team_e49084a18e,Perth Lynx,10,True,False
+2025-26,2302663,team_626dba9359,Townsville Fire,9,True,True
+2025-26,2302663,team_454fef3ef9,Adelaide Lightning,5,True,False
+2025-26,2302664,team_c51f6c2fb8,Geelong Venom,7,True,False
+2025-26,2302664,team_d331fde894,Sydney Flames,7,True,True
+2025-26,2302665,team_d331fde894,Sydney Flames,9,True,False
+2025-26,2302665,team_f8bd570511,Bendigo Spirit,8,True,True
+2025-26,2302666,team_e49084a18e,Perth Lynx,10,True,True
+2025-26,2302666,team_4582b92893,University of Canberra Capitals,2,True,False
+2025-26,2302667,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2025-26,2302667,team_626dba9359,Townsville Fire,10,True,True
+2025-26,2302668,team_f8bd570511,Bendigo Spirit,11,True,True
+2025-26,2302668,team_454fef3ef9,Adelaide Lightning,6,True,False
+2025-26,2302669,team_f8bd570511,Bendigo Spirit,9,True,True
+2025-26,2302669,team_c51f6c2fb8,Geelong Venom,5,True,False
+2025-26,2302670,team_e49084a18e,Perth Lynx,11,True,True
+2025-26,2302670,team_9428352aca,Southside Melbourne Flyers,11,True,False
+2025-26,2302671,team_626dba9359,Townsville Fire,9,True,True
+2025-26,2302671,team_d331fde894,Sydney Flames,6,True,False
+2025-26,2302672,team_c51f6c2fb8,Geelong Venom,8,True,False
+2025-26,2302672,team_4582b92893,University of Canberra Capitals,8,True,True
+2025-26,2302673,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2025-26,2302673,team_f8bd570511,Bendigo Spirit,9,True,True
+2025-26,2302674,team_4582b92893,University of Canberra Capitals,6,True,True
+2025-26,2302674,team_454fef3ef9,Adelaide Lightning,5,True,False
+2025-26,2302675,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2025-26,2302675,team_4582b92893,University of Canberra Capitals,7,True,True
+2025-26,2302676,team_f8bd570511,Bendigo Spirit,6,True,True
+2025-26,2302676,team_c51f6c2fb8,Geelong Venom,8,True,False
+2025-26,2302677,team_454fef3ef9,Adelaide Lightning,6,True,True
+2025-26,2302677,team_d331fde894,Sydney Flames,7,True,False
+2025-26,2302678,team_e49084a18e,Perth Lynx,6,True,True
+2025-26,2302678,team_626dba9359,Townsville Fire,2,True,False
+2025-26,2302679,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2025-26,2302679,team_c51f6c2fb8,Geelong Venom,7,True,False
+2025-26,2302680,team_454fef3ef9,Adelaide Lightning,7,True,False
+2025-26,2302680,team_f8bd570511,Bendigo Spirit,8,True,True
+2025-26,2302681,team_d331fde894,Sydney Flames,5,True,False
+2025-26,2302681,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2302682,team_c51f6c2fb8,Geelong Venom,5,True,False
+2025-26,2302682,team_4582b92893,University of Canberra Capitals,7,True,True
+2025-26,2302683,team_f8bd570511,Bendigo Spirit,10,True,True
+2025-26,2302683,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2025-26,2302684,team_e49084a18e,Perth Lynx,9,True,True
+2025-26,2302684,team_454fef3ef9,Adelaide Lightning,3,True,False
+2025-26,2302685,team_626dba9359,Townsville Fire,6,True,True
+2025-26,2302685,team_d331fde894,Sydney Flames,8,True,False
+2025-26,2302686,team_e49084a18e,Perth Lynx,12,True,True
+2025-26,2302686,team_4582b92893,University of Canberra Capitals,5,True,False
+2025-26,2302687,team_4582b92893,University of Canberra Capitals,1,True,False
+2025-26,2302687,team_d331fde894,Sydney Flames,11,True,True
+2025-26,2302688,team_454fef3ef9,Adelaide Lightning,5,True,False
+2025-26,2302688,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2025-26,2302689,team_e49084a18e,Perth Lynx,5,True,True
+2025-26,2302689,team_c51f6c2fb8,Geelong Venom,3,True,False
+2025-26,2302690,team_d331fde894,Sydney Flames,3,True,False
+2025-26,2302690,team_9428352aca,Southside Melbourne Flyers,3,True,True
+2025-26,2302691,team_626dba9359,Townsville Fire,7,True,False
+2025-26,2302691,team_f8bd570511,Bendigo Spirit,7,True,True
+2025-26,2302692,team_e49084a18e,Perth Lynx,10,True,True
+2025-26,2302692,team_454fef3ef9,Adelaide Lightning,5,True,False
+2025-26,2302693,team_9428352aca,Southside Melbourne Flyers,13,True,True
+2025-26,2302693,team_c51f6c2fb8,Geelong Venom,6,True,False
+2025-26,2302694,team_e49084a18e,Perth Lynx,7,True,False
+2025-26,2302694,team_4582b92893,University of Canberra Capitals,8,True,True
+2025-26,2302695,team_626dba9359,Townsville Fire,6,True,True
+2025-26,2302695,team_454fef3ef9,Adelaide Lightning,4,True,False
+2025-26,2302696,team_d331fde894,Sydney Flames,7,True,True
+2025-26,2302696,team_f8bd570511,Bendigo Spirit,3,True,False
+2025-26,2302697,team_c51f6c2fb8,Geelong Venom,9,True,True
+2025-26,2302697,team_626dba9359,Townsville Fire,5,True,False
+2025-26,2302698,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2302698,team_c51f6c2fb8,Geelong Venom,3,True,False
+2025-26,2302699,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2025-26,2302699,team_f8bd570511,Bendigo Spirit,7,True,True
+2025-26,2302700,team_4582b92893,University of Canberra Capitals,6,True,False
+2025-26,2302700,team_d331fde894,Sydney Flames,8,True,True
+2025-26,2302701,team_e49084a18e,Perth Lynx,10,True,True
+2025-26,2302701,team_454fef3ef9,Adelaide Lightning,5,True,False
+2025-26,2302702,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2025-26,2302702,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2302703,team_454fef3ef9,Adelaide Lightning,9,True,True
+2025-26,2302703,team_d331fde894,Sydney Flames,8,True,False
+2025-26,2302704,team_e49084a18e,Perth Lynx,6,True,True
+2025-26,2302704,team_f8bd570511,Bendigo Spirit,9,True,False
+2025-26,2302705,team_c51f6c2fb8,Geelong Venom,6,True,True
+2025-26,2302705,team_d331fde894,Sydney Flames,3,True,False
+2025-26,2302706,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2025-26,2302706,team_454fef3ef9,Adelaide Lightning,6,True,False
+2025-26,2302707,team_626dba9359,Townsville Fire,8,True,True
+2025-26,2302707,team_4582b92893,University of Canberra Capitals,6,True,False
+2025-26,2302708,team_454fef3ef9,Adelaide Lightning,7,True,False
+2025-26,2302708,team_4582b92893,University of Canberra Capitals,8,True,True
+2025-26,2302709,team_e49084a18e,Perth Lynx,9,True,False
+2025-26,2302709,team_626dba9359,Townsville Fire,13,True,True
+2025-26,2302710,team_4582b92893,University of Canberra Capitals,8,True,False
+2025-26,2302710,team_f8bd570511,Bendigo Spirit,9,True,True
+2025-26,2302711,team_454fef3ef9,Adelaide Lightning,6,True,True
+2025-26,2302711,team_c51f6c2fb8,Geelong Venom,5,True,False
+2025-26,2302712,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2025-26,2302712,team_626dba9359,Townsville Fire,8,True,True
+2025-26,2302713,team_e49084a18e,Perth Lynx,14,True,True
+2025-26,2302713,team_d331fde894,Sydney Flames,7,True,False
+2025-26,2302714,team_4582b92893,University of Canberra Capitals,6,True,False
+2025-26,2302714,team_f8bd570511,Bendigo Spirit,8,True,True
+2025-26,2302715,team_e49084a18e,Perth Lynx,8,True,True
+2025-26,2302715,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2025-26,2302716,team_c51f6c2fb8,Geelong Venom,11,True,True
+2025-26,2302716,team_f8bd570511,Bendigo Spirit,7,True,False
+2025-26,2302717,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2025-26,2302717,team_454fef3ef9,Adelaide Lightning,6,True,False
+2025-26,2302718,team_4582b92893,University of Canberra Capitals,7,True,False
+2025-26,2302718,team_626dba9359,Townsville Fire,11,True,True
+2025-26,2302719,team_d331fde894,Sydney Flames,5,True,False
+2025-26,2302719,team_c51f6c2fb8,Geelong Venom,9,True,True
+2025-26,2302720,team_e49084a18e,Perth Lynx,11,True,True
+2025-26,2302720,team_f8bd570511,Bendigo Spirit,6,True,False
+2025-26,2302721,team_4582b92893,University of Canberra Capitals,6,True,False
+2025-26,2302721,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2025-26,2302722,team_4582b92893,University of Canberra Capitals,8,True,True
+2025-26,2302722,team_c51f6c2fb8,Geelong Venom,7,True,False
+2025-26,2302723,team_e49084a18e,Perth Lynx,10,True,True
+2025-26,2302723,team_d331fde894,Sydney Flames,7,True,False
+2025-26,2302724,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2025-26,2302724,team_454fef3ef9,Adelaide Lightning,7,True,False
+2025-26,2302725,team_626dba9359,Townsville Fire,11,True,True
+2025-26,2302725,team_f8bd570511,Bendigo Spirit,5,True,False
+2019-20,234346,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2019-20,234346,team_e49084a18e,Perth Lynx,5,True,False
+2019-20,234347,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2019-20,234347,team_454fef3ef9,Adelaide Lightning,7,True,False
+2019-20,234348,team_454fef3ef9,Adelaide Lightning,8,True,True
+2019-20,234348,team_9428352aca,Southside Melbourne Flyers,2,True,False
+2019-20,234349,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2019-20,234349,team_d331fde894,Sydney Flames,9,True,False
+2019-20,234350,team_c51f6c2fb8,Geelong Venom,9,True,False
+2019-20,234350,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2019-20,234351,team_4582b92893,University of Canberra Capitals,5,True,True
+2019-20,234351,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2019-20,234352,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2019-20,234352,team_f8bd570511,Bendigo Spirit,3,True,False
+2025-26,2355844,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2025-26,2355844,team_626dba9359,Townsville Fire,9,True,True
+2025-26,2355846,team_e49084a18e,Perth Lynx,8,True,True
+2025-26,2355846,team_f8bd570511,Bendigo Spirit,6,True,False
+2025-26,2355958,team_e49084a18e,Perth Lynx,6,True,True
+2025-26,2355958,team_f8bd570511,Bendigo Spirit,4,True,False
+2025-26,2356107,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2025-26,2356107,team_626dba9359,Townsville Fire,2,True,False
+2025-26,2357161,team_626dba9359,Townsville Fire,7,True,True
+2025-26,2357161,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2025-26,2357803,team_e49084a18e,Perth Lynx,5,True,False
+2025-26,2357803,team_626dba9359,Townsville Fire,4,True,True
+2025-26,2357804,team_e49084a18e,Perth Lynx,5,True,False
+2025-26,2357804,team_626dba9359,Townsville Fire,2,True,True
+2019-20,236464,team_4582b92893,University of Canberra Capitals,6,True,False
+2019-20,236464,team_f8bd570511,Bendigo Spirit,6,True,True
+2019-20,236465,team_4582b92893,University of Canberra Capitals,6,True,True
+2019-20,236465,team_454fef3ef9,Adelaide Lightning,5,True,False
+2019-20,236466,team_f8bd570511,Bendigo Spirit,5,True,True
+2019-20,236466,team_626dba9359,Townsville Fire,3,True,False
+2019-20,236467,team_f8bd570511,Bendigo Spirit,9,True,False
+2019-20,236467,team_e49084a18e,Perth Lynx,9,True,True
+2019-20,236468,team_454fef3ef9,Adelaide Lightning,10,True,True
+2019-20,236468,team_e49084a18e,Perth Lynx,9,True,False
+2019-20,236469,team_4582b92893,University of Canberra Capitals,10,True,True
+2019-20,236469,team_c51f6c2fb8,Geelong Venom,10,True,False
+2019-20,236470,team_f8bd570511,Bendigo Spirit,3,True,False
+2019-20,236470,team_e49084a18e,Perth Lynx,7,True,True
+2019-20,236471,team_d331fde894,Sydney Flames,4,True,False
+2019-20,236471,team_626dba9359,Townsville Fire,4,True,True
+2019-20,236472,team_f8bd570511,Bendigo Spirit,8,True,False
+2019-20,236472,team_d331fde894,Sydney Flames,8,True,True
+2019-20,236473,team_c51f6c2fb8,Geelong Venom,8,True,True
+2019-20,236473,team_626dba9359,Townsville Fire,5,True,False
+2019-20,236474,team_d331fde894,Sydney Flames,3,True,False
+2019-20,236474,team_c51f6c2fb8,Geelong Venom,9,True,True
+2019-20,236475,team_454fef3ef9,Adelaide Lightning,9,True,True
+2019-20,236475,team_626dba9359,Townsville Fire,6,True,False
+2019-20,236476,team_d331fde894,Sydney Flames,6,True,False
+2019-20,236476,team_4582b92893,University of Canberra Capitals,10,True,True
+2019-20,236478,team_e49084a18e,Perth Lynx,4,True,False
+2019-20,236478,team_c51f6c2fb8,Geelong Venom,9,True,True
+2019-20,236479,team_4582b92893,University of Canberra Capitals,5,True,False
+2019-20,236479,team_626dba9359,Townsville Fire,5,True,True
+2019-20,236480,team_c51f6c2fb8,Geelong Venom,10,True,True
+2019-20,236480,team_d331fde894,Sydney Flames,5,True,False
+2019-20,236481,team_454fef3ef9,Adelaide Lightning,9,True,False
+2019-20,236481,team_c51f6c2fb8,Geelong Venom,7,True,True
+2019-20,236482,team_626dba9359,Townsville Fire,6,True,False
+2019-20,236482,team_e49084a18e,Perth Lynx,9,True,True
+2019-20,236483,team_454fef3ef9,Adelaide Lightning,8,True,True
+2019-20,236483,team_626dba9359,Townsville Fire,4,True,False
+2026-27,2497244,team_c51f6c2fb8,Geelong Venom,4,True,False
+2026-27,2497244,team_ac2feea530,Tasmania Jewels,10,True,True
+2026-27,2497245,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2026-27,2497245,team_d331fde894,Sydney Flames,7,True,True
+2026-27,2497246,team_4582b92893,University of Canberra Capitals,5,True,True
+2026-27,2497246,team_f8bd570511,Bendigo Spirit,4,True,False
+2026-27,2497247,team_e49084a18e,Perth Lynx,5,True,True
+2026-27,2497247,team_626dba9359,Townsville Fire,4,True,False
+2026-27,2497248,team_454fef3ef9,Adelaide Lightning,6,True,False
+2026-27,2497248,team_d331fde894,Sydney Flames,9,True,True
+2026-27,2497249,team_626dba9359,Townsville Fire,10,True,True
+2026-27,2497249,team_454fef3ef9,Adelaide Lightning,5,True,False
+2026-27,2497250,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2026-27,2497250,team_ac2feea530,Tasmania Jewels,2,True,False
+2026-27,2497251,team_d331fde894,Sydney Flames,10,True,True
+2026-27,2497251,team_4582b92893,University of Canberra Capitals,6,True,False
+2026-27,2497252,team_c51f6c2fb8,Geelong Venom,7,True,True
+2026-27,2497252,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2026-27,2497253,team_e49084a18e,Perth Lynx,6,True,True
+2026-27,2497253,team_454fef3ef9,Adelaide Lightning,8,True,False
+2026-27,2497254,team_626dba9359,Townsville Fire,4,True,False
+2026-27,2497254,team_d331fde894,Sydney Flames,7,True,True
+2026-27,2497255,team_f8bd570511,Bendigo Spirit,3,True,False
+2026-27,2497255,team_626dba9359,Townsville Fire,10,True,True
+2026-27,2497256,team_d331fde894,Sydney Flames,6,True,False
+2026-27,2497256,team_ac2feea530,Tasmania Jewels,6,True,True
+2026-27,2497257,team_c51f6c2fb8,Geelong Venom,11,True,False
+2026-27,2497257,team_4582b92893,University of Canberra Capitals,10,True,True
+2026-27,2497258,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2026-27,2497258,team_454fef3ef9,Adelaide Lightning,6,True,True
+2026-27,2497259,team_f8bd570511,Bendigo Spirit,3,True,False
+2026-27,2497259,team_c51f6c2fb8,Geelong Venom,7,True,True
+2026-27,2497260,team_e49084a18e,Perth Lynx,4,True,False
+2026-27,2497260,team_626dba9359,Townsville Fire,7,True,True
+2019-20,328617,team_4582b92893,University of Canberra Capitals,7,True,True
+2019-20,328617,team_c51f6c2fb8,Geelong Venom,6,True,False
+2019-20,328618,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2019-20,328618,team_454fef3ef9,Adelaide Lightning,8,True,False
+2019-20,328619,team_c51f6c2fb8,Geelong Venom,6,True,True
+2019-20,328619,team_4582b92893,University of Canberra Capitals,5,True,False
+2019-20,328620,team_454fef3ef9,Adelaide Lightning,8,True,False
+2019-20,328620,team_9428352aca,Southside Melbourne Flyers,4,True,True
+2019-20,330187,team_4582b92893,University of Canberra Capitals,11,True,True
+2019-20,330187,team_c51f6c2fb8,Geelong Venom,7,True,False
+2019-20,330257,team_4582b92893,University of Canberra Capitals,9,True,True
+2019-20,330257,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2019-20,330258,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2019-20,330258,team_4582b92893,University of Canberra Capitals,9,True,True
+2019-20,390280,team_c51f6c2fb8,Geelong Venom,12,True,True
+2019-20,390280,team_454fef3ef9,Adelaide Lightning,10,True,False
+2020,444950,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2020,444950,team_d331fde894,Sydney Flames,11,True,False
+2020,444951,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2020,444951,team_d331fde894,Sydney Flames,6,True,False
+2020,444983,team_d331fde894,Sydney Flames,8,True,False
+2020,444983,team_626dba9359,Townsville Fire,10,True,True
+2020,444984,team_4582b92893,University of Canberra Capitals,12,True,True
+2020,444984,team_f8bd570511,Bendigo Spirit,6,True,False
+2020,444989,team_f8bd570511,Bendigo Spirit,6,True,False
+2020,444989,team_454fef3ef9,Adelaide Lightning,8,True,True
+2020,444990,team_9428352aca,Southside Melbourne Flyers,13,True,True
+2020,444990,team_454fef3ef9,Adelaide Lightning,3,True,False
+2020,444991,team_454fef3ef9,Adelaide Lightning,9,True,True
+2020,444991,team_4582b92893,University of Canberra Capitals,9,True,False
+2020,444995,team_e49084a18e,Perth Lynx,6,True,False
+2020,444995,team_454fef3ef9,Adelaide Lightning,9,True,True
+2020,444999,team_d331fde894,Sydney Flames,8,True,False
+2020,444999,team_454fef3ef9,Adelaide Lightning,12,True,True
+2020,445002,team_4582b92893,University of Canberra Capitals,8,True,True
+2020,445002,team_c51f6c2fb8,Geelong Venom,5,True,False
+2020,445003,team_4582b92893,University of Canberra Capitals,6,True,True
+2020,445003,team_e49084a18e,Perth Lynx,5,True,False
+2020,445090,team_c51f6c2fb8,Geelong Venom,10,True,True
+2020,445090,team_454fef3ef9,Adelaide Lightning,7,True,False
+2020,445097,team_d331fde894,Sydney Flames,4,True,False
+2020,445097,team_c51f6c2fb8,Geelong Venom,7,True,True
+2020,445157,team_c51f6c2fb8,Geelong Venom,8,True,True
+2020,445157,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2020,445158,team_f8bd570511,Bendigo Spirit,4,True,False
+2020,445158,team_d331fde894,Sydney Flames,11,True,True
+2020,445159,team_4582b92893,University of Canberra Capitals,8,True,True
+2020,445159,team_d331fde894,Sydney Flames,10,True,False
+2020,445160,team_626dba9359,Townsville Fire,8,True,True
+2020,445160,team_454fef3ef9,Adelaide Lightning,5,True,False
+2020,445161,team_454fef3ef9,Adelaide Lightning,6,True,False
+2020,445161,team_d331fde894,Sydney Flames,10,True,True
+2020,445162,team_c51f6c2fb8,Geelong Venom,11,True,True
+2020,445162,team_454fef3ef9,Adelaide Lightning,8,True,False
+2020,445163,team_9428352aca,Southside Melbourne Flyers,11,True,True
+2020,445163,team_f8bd570511,Bendigo Spirit,5,True,False
+2020,445164,team_626dba9359,Townsville Fire,6,True,False
+2020,445164,team_e49084a18e,Perth Lynx,10,True,True
+2020,445165,team_4582b92893,University of Canberra Capitals,7,True,True
+2020,445165,team_e49084a18e,Perth Lynx,9,True,False
+2020,445166,team_c51f6c2fb8,Geelong Venom,10,True,True
+2020,445166,team_d331fde894,Sydney Flames,3,True,False
+2020,445167,team_f8bd570511,Bendigo Spirit,7,True,False
+2020,445167,team_626dba9359,Townsville Fire,10,True,True
+2020,445168,team_c51f6c2fb8,Geelong Venom,7,True,True
+2020,445168,team_4582b92893,University of Canberra Capitals,5,True,False
+2020,445169,team_c51f6c2fb8,Geelong Venom,8,True,False
+2020,445169,team_626dba9359,Townsville Fire,8,True,True
+2020,445170,team_c51f6c2fb8,Geelong Venom,10,True,True
+2020,445170,team_e49084a18e,Perth Lynx,7,True,False
+2020,445171,team_f8bd570511,Bendigo Spirit,8,True,False
+2020,445171,team_d331fde894,Sydney Flames,11,True,True
+2020,445172,team_626dba9359,Townsville Fire,4,True,False
+2020,445172,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2020,445173,team_c51f6c2fb8,Geelong Venom,9,True,True
+2020,445173,team_f8bd570511,Bendigo Spirit,6,True,False
+2020,445175,team_e49084a18e,Perth Lynx,10,True,True
+2020,445175,team_f8bd570511,Bendigo Spirit,5,True,False
+2020,445176,team_d331fde894,Sydney Flames,4,True,True
+2020,445176,team_e49084a18e,Perth Lynx,8,True,False
+2020,445177,team_454fef3ef9,Adelaide Lightning,4,True,False
+2020,445177,team_4582b92893,University of Canberra Capitals,7,True,True
+2020,445178,team_4582b92893,University of Canberra Capitals,8,True,True
+2020,445178,team_626dba9359,Townsville Fire,9,True,False
+2020,445179,team_9428352aca,Southside Melbourne Flyers,1,True,False
+2020,445179,team_4582b92893,University of Canberra Capitals,7,True,True
+2020,445180,team_e49084a18e,Perth Lynx,9,True,True
+2020,445180,team_454fef3ef9,Adelaide Lightning,5,True,False
+2020,445181,team_e49084a18e,Perth Lynx,7,True,False
+2020,445181,team_626dba9359,Townsville Fire,13,True,True
+2020,445182,team_e49084a18e,Perth Lynx,4,True,False
+2020,445182,team_9428352aca,Southside Melbourne Flyers,11,True,True
+2020,445183,team_f8bd570511,Bendigo Spirit,7,True,False
+2020,445183,team_4582b92893,University of Canberra Capitals,11,True,True
+2020,445184,team_626dba9359,Townsville Fire,8,True,True
+2020,445184,team_c51f6c2fb8,Geelong Venom,6,True,False
+2020,445185,team_d331fde894,Sydney Flames,5,True,False
+2020,445185,team_626dba9359,Townsville Fire,5,True,True
+2020,445186,team_f8bd570511,Bendigo Spirit,2,True,False
+2020,445186,team_e49084a18e,Perth Lynx,7,True,True
+2020,445187,team_454fef3ef9,Adelaide Lightning,8,True,True
+2020,445187,team_f8bd570511,Bendigo Spirit,8,True,False
+2020,445188,team_4582b92893,University of Canberra Capitals,3,True,False
+2020,445188,team_626dba9359,Townsville Fire,6,True,True
+2020,445189,team_c51f6c2fb8,Geelong Venom,13,True,True
+2020,445189,team_f8bd570511,Bendigo Spirit,7,True,False
+2020,445191,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2020,445191,team_626dba9359,Townsville Fire,4,True,False
+2020,445211,team_f8bd570511,Bendigo Spirit,5,True,False
+2020,445211,team_626dba9359,Townsville Fire,8,True,True
+2020,445212,team_c51f6c2fb8,Geelong Venom,2,True,False
+2020,445212,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2020,445213,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2020,445213,team_4582b92893,University of Canberra Capitals,9,True,False
+2020,445214,team_e49084a18e,Perth Lynx,4,True,False
+2020,445214,team_9428352aca,Southside Melbourne Flyers,11,True,True
+2020,445220,team_d331fde894,Sydney Flames,7,True,True
+2020,445220,team_e49084a18e,Perth Lynx,8,True,False
+2020,445231,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2020,445231,team_454fef3ef9,Adelaide Lightning,2,True,False
+2020,621328,team_c51f6c2fb8,Geelong Venom,8,True,True
+2020,621328,team_4582b92893,University of Canberra Capitals,5,True,False
+2020,621329,team_9428352aca,Southside Melbourne Flyers,2,True,True
+2020,621329,team_626dba9359,Townsville Fire,4,True,False
+2020,622381,team_c51f6c2fb8,Geelong Venom,7,True,False
+2020,622381,team_626dba9359,Townsville Fire,8,True,True
+2020,622974,team_9428352aca,Southside Melbourne Flyers,4,True,True
+2020,622974,team_626dba9359,Townsville Fire,2,True,False
+2021-22,831050,team_454fef3ef9,Adelaide Lightning,7,True,False
+2021-22,831050,team_e49084a18e,Perth Lynx,7,True,True
+2021-22,831053,team_454fef3ef9,Adelaide Lightning,11,True,True
+2021-22,831053,team_d331fde894,Sydney Flames,8,True,False
+2021-22,831055,team_4582b92893,University of Canberra Capitals,9,True,True
+2021-22,831055,team_d331fde894,Sydney Flames,4,True,False
+2021-22,831056,team_9428352aca,Southside Melbourne Flyers,6,True,False
+2021-22,831056,team_f8bd570511,Bendigo Spirit,5,True,True
+2021-22,831057,team_c51f6c2fb8,Geelong Venom,13,True,True
+2021-22,831057,team_454fef3ef9,Adelaide Lightning,5,True,False
+2021-22,831059,team_626dba9359,Townsville Fire,6,True,True
+2021-22,831059,team_d331fde894,Sydney Flames,7,True,False
+2021-22,831060,team_e49084a18e,Perth Lynx,11,True,True
+2021-22,831060,team_9428352aca,Southside Melbourne Flyers,10,True,False
+2021-22,831061,team_f8bd570511,Bendigo Spirit,8,True,False
+2021-22,831061,team_d331fde894,Sydney Flames,8,True,True
+2021-22,831062,team_c51f6c2fb8,Geelong Venom,5,True,True
+2021-22,831062,team_d331fde894,Sydney Flames,6,True,False
+2021-22,831064,team_c51f6c2fb8,Geelong Venom,8,True,True
+2021-22,831064,team_f8bd570511,Bendigo Spirit,4,True,False
+2021-22,831065,team_e49084a18e,Perth Lynx,7,True,True
+2021-22,831065,team_c51f6c2fb8,Geelong Venom,7,True,False
+2021-22,831066,team_e49084a18e,Perth Lynx,10,True,True
+2021-22,831066,team_4582b92893,University of Canberra Capitals,5,True,False
+2021-22,831067,team_e49084a18e,Perth Lynx,7,True,False
+2021-22,831067,team_4582b92893,University of Canberra Capitals,8,True,True
+2021-22,831068,team_454fef3ef9,Adelaide Lightning,9,True,True
+2021-22,831068,team_d331fde894,Sydney Flames,7,True,False
+2021-22,831069,team_626dba9359,Townsville Fire,13,True,True
+2021-22,831069,team_f8bd570511,Bendigo Spirit,6,True,False
+2021-22,831070,team_e49084a18e,Perth Lynx,10,True,True
+2021-22,831070,team_454fef3ef9,Adelaide Lightning,5,True,False
+2021-22,831071,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2021-22,831071,team_454fef3ef9,Adelaide Lightning,11,True,True
+2021-22,831073,team_4582b92893,University of Canberra Capitals,10,True,True
+2021-22,831073,team_626dba9359,Townsville Fire,5,True,False
+2021-22,831074,team_4582b92893,University of Canberra Capitals,11,True,True
+2021-22,831074,team_626dba9359,Townsville Fire,7,True,False
+2021-22,831075,team_d331fde894,Sydney Flames,5,True,True
+2021-22,831075,team_f8bd570511,Bendigo Spirit,4,True,False
+2021-22,831076,team_e49084a18e,Perth Lynx,6,True,True
+2021-22,831076,team_9428352aca,Southside Melbourne Flyers,9,True,False
+2021-22,831077,team_626dba9359,Townsville Fire,8,True,True
+2021-22,831077,team_d331fde894,Sydney Flames,3,True,False
+2021-22,831078,team_c51f6c2fb8,Geelong Venom,5,True,False
+2021-22,831078,team_f8bd570511,Bendigo Spirit,8,True,True
+2021-22,831079,team_626dba9359,Townsville Fire,6,True,False
+2021-22,831079,team_f8bd570511,Bendigo Spirit,6,True,True
+2021-22,831082,team_c51f6c2fb8,Geelong Venom,10,True,True
+2021-22,831082,team_626dba9359,Townsville Fire,4,True,False
+2021-22,831083,team_c51f6c2fb8,Geelong Venom,10,True,False
+2021-22,831083,team_f8bd570511,Bendigo Spirit,10,True,True
+2021-22,831084,team_626dba9359,Townsville Fire,8,True,False
+2021-22,831084,team_e49084a18e,Perth Lynx,7,True,True
+2021-22,831085,team_4582b92893,University of Canberra Capitals,11,True,True
+2021-22,831085,team_f8bd570511,Bendigo Spirit,4,True,False
+2021-22,831086,team_f8bd570511,Bendigo Spirit,8,True,True
+2021-22,831086,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2021-22,831087,team_4582b92893,University of Canberra Capitals,7,True,False
+2021-22,831087,team_c51f6c2fb8,Geelong Venom,7,True,True
+2021-22,831091,team_626dba9359,Townsville Fire,5,True,False
+2021-22,831091,team_454fef3ef9,Adelaide Lightning,9,True,True
+2021-22,831094,team_c51f6c2fb8,Geelong Venom,6,True,True
+2021-22,831094,team_e49084a18e,Perth Lynx,8,True,False
+2021-22,831095,team_454fef3ef9,Adelaide Lightning,12,True,True
+2021-22,831095,team_626dba9359,Townsville Fire,10,True,False
+2021-22,831096,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2021-22,831096,team_f8bd570511,Bendigo Spirit,7,True,False
+2021-22,831097,team_626dba9359,Townsville Fire,8,True,True
+2021-22,831097,team_d331fde894,Sydney Flames,4,True,False
+2021-22,831098,team_4582b92893,University of Canberra Capitals,5,True,True
+2021-22,831098,team_f8bd570511,Bendigo Spirit,2,True,False
+2021-22,831099,team_f8bd570511,Bendigo Spirit,4,True,False
+2021-22,831099,team_e49084a18e,Perth Lynx,7,True,True
+2021-22,831100,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2021-22,831100,team_626dba9359,Townsville Fire,7,True,False
+2021-22,831101,team_f8bd570511,Bendigo Spirit,11,True,True
+2021-22,831101,team_454fef3ef9,Adelaide Lightning,7,True,False
+2021-22,831102,team_f8bd570511,Bendigo Spirit,7,True,True
+2021-22,831102,team_d331fde894,Sydney Flames,8,True,False
+2021-22,831103,team_4582b92893,University of Canberra Capitals,2,True,False
+2021-22,831103,team_c51f6c2fb8,Geelong Venom,14,True,True
+2021-22,831105,team_c51f6c2fb8,Geelong Venom,8,True,True
+2021-22,831105,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2021-22,831106,team_c51f6c2fb8,Geelong Venom,6,True,False
+2021-22,831106,team_626dba9359,Townsville Fire,7,True,True
+2021-22,831107,team_c51f6c2fb8,Geelong Venom,6,True,True
+2021-22,831107,team_626dba9359,Townsville Fire,6,True,False
+2021-22,831108,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2021-22,831108,team_626dba9359,Townsville Fire,4,True,False
+2021-22,831109,team_454fef3ef9,Adelaide Lightning,7,True,False
+2021-22,831109,team_626dba9359,Townsville Fire,11,True,True
+2021-22,831110,team_454fef3ef9,Adelaide Lightning,11,True,True
+2021-22,831110,team_4582b92893,University of Canberra Capitals,7,True,False
+2021-22,831111,team_454fef3ef9,Adelaide Lightning,5,True,False
+2021-22,831111,team_9428352aca,Southside Melbourne Flyers,9,True,True
+2021-22,831112,team_454fef3ef9,Adelaide Lightning,11,True,True
+2021-22,831112,team_f8bd570511,Bendigo Spirit,12,True,False
+2021-22,831113,team_d331fde894,Sydney Flames,5,True,False
+2021-22,831113,team_e49084a18e,Perth Lynx,9,True,True
+2021-22,831117,team_c51f6c2fb8,Geelong Venom,7,True,True
+2021-22,831117,team_d331fde894,Sydney Flames,4,True,False
+2021-22,831118,team_9428352aca,Southside Melbourne Flyers,6,True,True
+2021-22,831118,team_d331fde894,Sydney Flames,7,True,False
+2021-22,831120,team_4582b92893,University of Canberra Capitals,9,True,True
+2021-22,831120,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2021-22,831121,team_4582b92893,University of Canberra Capitals,5,True,False
+2021-22,831121,team_454fef3ef9,Adelaide Lightning,11,True,True
+2021-22,831122,team_626dba9359,Townsville Fire,8,True,True
+2021-22,831122,team_e49084a18e,Perth Lynx,4,True,False
+2021-22,831123,team_4582b92893,University of Canberra Capitals,9,True,True
+2021-22,831123,team_d331fde894,Sydney Flames,10,True,False
+2021-22,831126,team_e49084a18e,Perth Lynx,10,True,True
+2021-22,831126,team_4582b92893,University of Canberra Capitals,9,True,False
+2021-22,831127,team_d331fde894,Sydney Flames,8,True,True
+2021-22,831127,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2021-22,831128,team_4582b92893,University of Canberra Capitals,9,True,True
+2021-22,831128,team_454fef3ef9,Adelaide Lightning,6,True,False
+2021-22,831129,team_c51f6c2fb8,Geelong Venom,9,True,False
+2021-22,831129,team_454fef3ef9,Adelaide Lightning,12,True,True
+2021-22,831130,team_e49084a18e,Perth Lynx,7,True,False
+2021-22,831130,team_454fef3ef9,Adelaide Lightning,10,True,True
+2021-22,831132,team_c51f6c2fb8,Geelong Venom,7,True,True
+2021-22,831132,team_9428352aca,Southside Melbourne Flyers,3,True,False
+2021-22,831133,team_e49084a18e,Perth Lynx,8,True,True
+2021-22,831133,team_d331fde894,Sydney Flames,6,True,False
+2021-22,831135,team_c51f6c2fb8,Geelong Venom,8,True,True
+2021-22,831135,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2021-22,923826,team_4582b92893,University of Canberra Capitals,11,True,True
+2021-22,923826,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2021-22,923829,team_e49084a18e,Perth Lynx,9,True,False
+2021-22,923829,team_d331fde894,Sydney Flames,10,True,True
+2021-22,934410,team_454fef3ef9,Adelaide Lightning,9,True,False
+2021-22,934410,team_c51f6c2fb8,Geelong Venom,9,True,True
+2021-22,934412,team_e49084a18e,Perth Lynx,7,True,True
+2021-22,934412,team_4582b92893,University of Canberra Capitals,3,True,False
+2021-22,934557,team_454fef3ef9,Adelaide Lightning,5,True,False
+2021-22,934557,team_c51f6c2fb8,Geelong Venom,10,True,True
+2021-22,935853,team_e49084a18e,Perth Lynx,9,True,True
+2021-22,935853,team_c51f6c2fb8,Geelong Venom,5,True,False
+2021-22,935868,team_e49084a18e,Perth Lynx,7,True,False
+2021-22,935868,team_c51f6c2fb8,Geelong Venom,7,True,True
+2021-22,936543,team_c51f6c2fb8,Geelong Venom,8,True,True
+2021-22,936543,team_e49084a18e,Perth Lynx,6,True,False
+2022-23,944417,team_454fef3ef9,Adelaide Lightning,3,True,False
+2022-23,944417,team_e49084a18e,Perth Lynx,10,True,True
+2022-23,944418,team_454fef3ef9,Adelaide Lightning,5,True,True
+2022-23,944418,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944419,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2022-23,944419,team_454fef3ef9,Adelaide Lightning,5,True,False
+2022-23,944420,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2022-23,944420,team_e49084a18e,Perth Lynx,2,True,False
+2022-23,944421,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2022-23,944421,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944422,team_454fef3ef9,Adelaide Lightning,4,True,False
+2022-23,944422,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2022-23,944423,team_f8bd570511,Bendigo Spirit,6,True,False
+2022-23,944423,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2022-23,944424,team_4582b92893,University of Canberra Capitals,5,True,False
+2022-23,944424,team_e49084a18e,Perth Lynx,9,True,True
+2022-23,944425,team_626dba9359,Townsville Fire,10,True,True
+2022-23,944425,team_4582b92893,University of Canberra Capitals,6,True,False
+2022-23,944426,team_454fef3ef9,Adelaide Lightning,7,True,True
+2022-23,944426,team_626dba9359,Townsville Fire,2,True,False
+2022-23,944427,team_9428352aca,Southside Melbourne Flyers,8,True,False
+2022-23,944427,team_d331fde894,Sydney Flames,8,True,True
+2022-23,944428,team_e49084a18e,Perth Lynx,9,True,True
+2022-23,944428,team_4582b92893,University of Canberra Capitals,5,True,False
+2022-23,944429,team_454fef3ef9,Adelaide Lightning,11,True,True
+2022-23,944429,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2022-23,944430,team_c51f6c2fb8,Geelong Venom,11,True,True
+2022-23,944430,team_454fef3ef9,Adelaide Lightning,8,True,False
+2022-23,944431,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944431,team_c51f6c2fb8,Geelong Venom,8,True,False
+2022-23,944432,team_9428352aca,Southside Melbourne Flyers,5,True,True
+2022-23,944432,team_4582b92893,University of Canberra Capitals,5,True,False
+2022-23,944433,team_454fef3ef9,Adelaide Lightning,7,True,False
+2022-23,944433,team_d331fde894,Sydney Flames,5,True,True
+2022-23,944434,team_e49084a18e,Perth Lynx,11,True,True
+2022-23,944434,team_d331fde894,Sydney Flames,10,True,False
+2022-23,944435,team_c51f6c2fb8,Geelong Venom,9,True,True
+2022-23,944435,team_f8bd570511,Bendigo Spirit,9,True,False
+2022-23,944436,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2022-23,944436,team_e49084a18e,Perth Lynx,9,True,False
+2022-23,944437,team_c51f6c2fb8,Geelong Venom,12,True,True
+2022-23,944437,team_d331fde894,Sydney Flames,3,True,False
+2022-23,944438,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944438,team_f8bd570511,Bendigo Spirit,5,True,False
+2022-23,944439,team_d331fde894,Sydney Flames,8,True,False
+2022-23,944439,team_e49084a18e,Perth Lynx,9,True,True
+2022-23,944440,team_4582b92893,University of Canberra Capitals,7,True,True
+2022-23,944440,team_f8bd570511,Bendigo Spirit,7,True,False
+2022-23,944441,team_c51f6c2fb8,Geelong Venom,9,True,True
+2022-23,944441,team_626dba9359,Townsville Fire,8,True,False
+2022-23,944442,team_c51f6c2fb8,Geelong Venom,8,True,True
+2022-23,944442,team_e49084a18e,Perth Lynx,4,True,False
+2022-23,944443,team_454fef3ef9,Adelaide Lightning,5,True,False
+2022-23,944443,team_626dba9359,Townsville Fire,8,True,True
+2022-23,944444,team_d331fde894,Sydney Flames,7,True,False
+2022-23,944444,team_626dba9359,Townsville Fire,7,True,True
+2022-23,944445,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2022-23,944445,team_4582b92893,University of Canberra Capitals,7,True,False
+2022-23,944446,team_c51f6c2fb8,Geelong Venom,10,True,True
+2022-23,944446,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944447,team_454fef3ef9,Adelaide Lightning,5,True,False
+2022-23,944447,team_e49084a18e,Perth Lynx,9,True,True
+2022-23,944448,team_4582b92893,University of Canberra Capitals,4,True,False
+2022-23,944448,team_626dba9359,Townsville Fire,8,True,True
+2022-23,944449,team_c51f6c2fb8,Geelong Venom,9,True,False
+2022-23,944449,team_e49084a18e,Perth Lynx,7,True,True
+2022-23,944450,team_454fef3ef9,Adelaide Lightning,7,True,False
+2022-23,944450,team_f8bd570511,Bendigo Spirit,7,True,True
+2022-23,944451,team_e49084a18e,Perth Lynx,5,True,True
+2022-23,944451,team_4582b92893,University of Canberra Capitals,4,True,False
+2022-23,944452,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944452,team_f8bd570511,Bendigo Spirit,4,True,False
+2022-23,944453,team_c51f6c2fb8,Geelong Venom,7,True,False
+2022-23,944453,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2022-23,944454,team_4582b92893,University of Canberra Capitals,8,True,False
+2022-23,944454,team_9428352aca,Southside Melbourne Flyers,7,True,True
+2022-23,944455,team_e49084a18e,Perth Lynx,10,True,True
+2022-23,944455,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944456,team_e49084a18e,Perth Lynx,3,True,True
+2022-23,944456,team_454fef3ef9,Adelaide Lightning,9,True,False
+2022-23,944457,team_626dba9359,Townsville Fire,6,True,True
+2022-23,944457,team_9428352aca,Southside Melbourne Flyers,7,True,False
+2022-23,944458,team_d331fde894,Sydney Flames,6,True,True
+2022-23,944458,team_4582b92893,University of Canberra Capitals,7,True,False
+2022-23,944459,team_4582b92893,University of Canberra Capitals,7,True,False
+2022-23,944459,team_c51f6c2fb8,Geelong Venom,6,True,True
+2022-23,944460,team_d331fde894,Sydney Flames,7,True,False
+2022-23,944460,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944461,team_c51f6c2fb8,Geelong Venom,8,True,True
+2022-23,944461,team_d331fde894,Sydney Flames,1,True,False
+2022-23,944462,team_9428352aca,Southside Melbourne Flyers,4,True,True
+2022-23,944462,team_d331fde894,Sydney Flames,4,True,False
+2022-23,944463,team_9428352aca,Southside Melbourne Flyers,8,True,True
+2022-23,944463,team_f8bd570511,Bendigo Spirit,2,True,False
+2022-23,944464,team_4582b92893,University of Canberra Capitals,9,True,False
+2022-23,944464,team_c51f6c2fb8,Geelong Venom,11,True,True
+2022-23,944465,team_626dba9359,Townsville Fire,6,True,True
+2022-23,944465,team_e49084a18e,Perth Lynx,2,True,False
+2022-23,944466,team_454fef3ef9,Adelaide Lightning,6,True,False
+2022-23,944466,team_d331fde894,Sydney Flames,4,True,True
+2022-23,944467,team_f8bd570511,Bendigo Spirit,6,True,True
+2022-23,944467,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944468,team_c51f6c2fb8,Geelong Venom,8,True,True
+2022-23,944468,team_454fef3ef9,Adelaide Lightning,6,True,False
+2022-23,944469,team_626dba9359,Townsville Fire,9,True,True
+2022-23,944469,team_454fef3ef9,Adelaide Lightning,3,True,False
+2022-23,944470,team_4582b92893,University of Canberra Capitals,6,True,False
+2022-23,944470,team_f8bd570511,Bendigo Spirit,6,True,True
+2022-23,944471,team_626dba9359,Townsville Fire,8,True,True
+2022-23,944471,team_4582b92893,University of Canberra Capitals,6,True,False
+2022-23,944472,team_c51f6c2fb8,Geelong Venom,6,True,True
+2022-23,944472,team_4582b92893,University of Canberra Capitals,4,True,False
+2022-23,944473,team_9428352aca,Southside Melbourne Flyers,12,True,True
+2022-23,944473,team_f8bd570511,Bendigo Spirit,8,True,False
+2022-23,944474,team_d331fde894,Sydney Flames,3,True,False
+2022-23,944474,team_626dba9359,Townsville Fire,7,True,True
+2022-23,944475,team_4582b92893,University of Canberra Capitals,3,True,False
+2022-23,944475,team_d331fde894,Sydney Flames,6,True,True
+2022-23,944476,team_f8bd570511,Bendigo Spirit,7,True,True
+2022-23,944476,team_4582b92893,University of Canberra Capitals,4,True,False
+2022-23,944477,team_454fef3ef9,Adelaide Lightning,6,True,True
+2022-23,944477,team_4582b92893,University of Canberra Capitals,8,True,False
+2022-23,944478,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944478,team_f8bd570511,Bendigo Spirit,9,True,True
+2022-23,944479,team_c51f6c2fb8,Geelong Venom,8,True,False
+2022-23,944479,team_9428352aca,Southside Melbourne Flyers,11,True,True
+2022-23,944480,team_d331fde894,Sydney Flames,5,True,True
+2022-23,944480,team_4582b92893,University of Canberra Capitals,3,True,False
+2022-23,944481,team_f8bd570511,Bendigo Spirit,5,True,True
+2022-23,944481,team_626dba9359,Townsville Fire,6,True,False
+2022-23,944482,team_f8bd570511,Bendigo Spirit,5,True,False
+2022-23,944482,team_e49084a18e,Perth Lynx,9,True,True
+2022-23,944483,team_c51f6c2fb8,Geelong Venom,7,True,False
+2022-23,944483,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2022-23,944484,team_626dba9359,Townsville Fire,4,True,True
+2022-23,944484,team_e49084a18e,Perth Lynx,5,True,False
+2022-23,944485,team_f8bd570511,Bendigo Spirit,6,True,True
+2022-23,944485,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944486,team_454fef3ef9,Adelaide Lightning,9,True,False
+2022-23,944486,team_4582b92893,University of Canberra Capitals,7,True,True
+2022-23,944487,team_f8bd570511,Bendigo Spirit,11,True,True
+2022-23,944487,team_454fef3ef9,Adelaide Lightning,8,True,False
+2022-23,944488,team_4582b92893,University of Canberra Capitals,8,True,False
+2022-23,944488,team_454fef3ef9,Adelaide Lightning,10,True,True
+2022-23,944489,team_c51f6c2fb8,Geelong Venom,8,True,False
+2022-23,944489,team_f8bd570511,Bendigo Spirit,7,True,True
+2022-23,944490,team_9428352aca,Southside Melbourne Flyers,10,True,True
+2022-23,944490,team_d331fde894,Sydney Flames,6,True,False
+2022-23,944491,team_f8bd570511,Bendigo Spirit,10,True,True
+2022-23,944491,team_e49084a18e,Perth Lynx,9,True,False
+2022-23,944492,team_e49084a18e,Perth Lynx,8,True,True
+2022-23,944492,team_f8bd570511,Bendigo Spirit,3,True,False
+2022-23,944493,team_626dba9359,Townsville Fire,8,True,True
+2022-23,944493,team_e49084a18e,Perth Lynx,4,True,False
+2022-23,944494,team_e49084a18e,Perth Lynx,7,True,True
+2022-23,944494,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2022-23,944495,team_454fef3ef9,Adelaide Lightning,6,True,False
+2022-23,944495,team_f8bd570511,Bendigo Spirit,11,True,True
+2022-23,944496,team_c51f6c2fb8,Geelong Venom,7,True,True
+2022-23,944496,team_f8bd570511,Bendigo Spirit,3,True,False
+2022-23,944497,team_c51f6c2fb8,Geelong Venom,9,True,True
+2022-23,944497,team_e49084a18e,Perth Lynx,7,True,False
+2022-23,944498,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2022-23,944498,team_626dba9359,Townsville Fire,8,True,True
+2022-23,944499,team_c51f6c2fb8,Geelong Venom,6,True,True
+2022-23,944499,team_626dba9359,Townsville Fire,3,True,False
+2022-23,944500,team_c51f6c2fb8,Geelong Venom,5,True,True
+2022-23,944500,team_454fef3ef9,Adelaide Lightning,5,True,False

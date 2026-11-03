@@ -9,6 +9,7 @@ PROCESSED=DATA/"processed";ANALYTICS=DATA/"analytics"
 DEFENSE=json.loads((ROOT/"app/defense.json").read_text(encoding="utf-8"))
 COACH_SOURCE="https://www.wnbl.com.au/news/wnbl27-roster-tracker-every-off-season-move"
 TEAMS=[
+ {'dataset_name': 'Tasmania Jewels', 'name': 'Tasmania Jewels', 'slug': 'tasmania-jewels', 'coach': 'Claudia Brassard', 'logo': 'https://images.dc.connect.sportradar.com/b1jrd/5d917012344d4983a10ef442f7742397?size=200&format=webp', 'source': 'https://www.wnbl.com.au/news/tasmania-jewels-announce-inaugural-coach---claudia-brassard'},
  {"dataset_name":"Adelaide Lightning","name":"Adelaide Lightning","slug":"adelaide-lightning","coach":"Aja Parham-Ammar","logo":"https://cdn.prod.website-files.com/67edd996ab58aa16079f9454/6899df15a8c4a3edb445f481_6899d7332545db17b7f10241_256.webp","source":"https://adelaidelightning.wnbl.com.au/"},
  {"dataset_name":"Bendigo Spirit","name":"Bendigo Spirit","slug":"bendigo-spirit","coach":"Kennedy Kereama","logo":"https://cdn.prod.website-files.com/67edd996ab58aa16079f9454/689d6977ce07a7f730673b68_1a7c0fec-a826-4214-8182-018f056cf632-p-500.png","source":"https://bendigospirit.wnbl.com.au/"},
  {"dataset_name":"University of Canberra Capitals","name":"University of Canberra Capitals","slug":"canberra-capitals","coach":"Paul Goriss","logo":"https://cdn.prod.website-files.com/67edd996ab58aa16079f9454/67ede9a6f27cf615c17f25a5_UC-Capitals-2019%20(1).webp","source":"https://uccapitals.wnbl.com.au/"},

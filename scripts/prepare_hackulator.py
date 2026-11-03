@@ -171,7 +171,7 @@ total_off=sum(r["off_n"] for r in clutch);total_def=sum(r["def_n"] for r in clut
 league_off=sum(r["off_n"]*r["off_ppp"] for r in clutch)/total_off
 league_def=sum(r["def_n"]*r["def_ppp"] for r in clutch)/total_def
 out={
-    "meta":{"games":591,"seasons":sorted({r["season"] for r in clutch}),"ft_oreb_rate":round(orb/reb,4),
+    "meta":{"games":len({r["game_id"] for r in csv.DictReader((DATA/"analytics/possessions.csv").open(encoding="utf-8-sig"))}),"seasons":sorted({r["season"] for r in clutch}),"ft_oreb_rate":round(orb/reb,4),
             "ft_oreb_n":reb,"shrinkage_prior":75,"league_off_ppp":round(league_off,4),"league_def_ppp":round(league_def,4),
             "league_ft_pct":round(shooting["all"]["ft_pct"],6),"league_three_pct":round(shooting["all"]["three_pct"],6),
             "clutch_ft_pct":round(shooting["clutch"]["ft_pct"],6),"clutch_three_pct":round(shooting["clutch"]["three_pct"],6),

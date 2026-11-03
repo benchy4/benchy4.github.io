@@ -9,7 +9,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT.parent / "outputs/WNBL_Data_Collector/wnbl_dataset/analytics/winning_thresholds"
-SEASONS = ["2019-20", "2020", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+SEASONS = sorted({r["season"] for r in csv.DictReader((BASE / "team_game_metrics.csv").open(encoding="utf-8-sig"))})
 TARGET_WIN_RATE = 0.70
 CALIBRATION_FLOOR = 0.65
 MAX_CALIBRATION_GAP = 0.08

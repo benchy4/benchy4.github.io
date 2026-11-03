@@ -1,0 +1,24 @@
+metric_1,label_1,direction_1,threshold_1,metric_2,label_2,direction_2,threshold_2,discovery_n,discovery_win_rate,validation_n,validation_win_rate,validation_ci_low,validation_ci_high
+three_pct,3P%,at_least,0.45,efg_pct,eFG%,at_least,0.575,43,0.9767441860465116,42,0.9523809523809523,0.8420986468452026,0.9868427513607937
+two_pct,2P%,at_least,0.575,efg_pct,eFG%,at_least,0.575,43,0.9302325581395349,48,0.9375,0.8316430233725778,0.9785171568687727
+fg_pct,FG%,at_least,0.5,efg_pct,eFG%,at_least,0.575,79,0.9493670886075949,73,0.9178082191780822,0.8320540661871378,0.9617867700265796
+fg_pct,FG%,at_least,0.5,two_pct,2P%,at_least,0.575,55,0.9272727272727272,54,0.9074074074074074,0.8008987246934547,0.9597994579294327
+assist_turnover_ratio,Assist/turnover ratio,at_least,2.0,turnover_margin,Turnover margin,at_least,6,46,0.8695652173913043,34,0.8529411764705882,0.6987161182594804,0.9355065361737359
+turnover_rate,Turnover rate,at_most,0.12,turnover_margin,Turnover margin,at_least,6,65,0.8,42,0.7380952380952381,0.5893098001502445,0.8469751462739642
+three_attempted,3PA,at_least,28,assist_turnover_ratio,Assist/turnover ratio,at_least,2.0,40,0.65,38,0.7368421052631579,0.5799084979362465,0.8502853761029869
+turnovers,Turnovers,at_most,10,assist_turnover_ratio,Assist/turnover ratio,at_least,2.0,78,0.7051282051282052,53,0.7358490566037735,0.6041907894277545,0.8356279348868316
+fga_plus_fta_margin,FGA + FTA differential,at_least,10,turnover_margin,Turnover margin,at_least,6,59,0.8135593220338984,37,0.7297297297297297,0.5702152452607867,0.8460270175300932
+fga_plus_fta_margin,FGA + FTA differential,at_least,10,turnover_rate,Turnover rate,at_most,0.12,45,0.9333333333333333,33,0.7272727272727273,0.5578211674561319,0.849327273436772
+fga_plus_fta_margin,FGA + FTA differential,at_least,10,defensive_rebound_pct,Defensive rebound %,at_least,0.8,44,0.8863636363636364,33,0.7272727272727273,0.5578211674561319,0.849327273436772
+turnover_rate,Turnover rate,at_most,0.12,assist_turnover_ratio,Assist/turnover ratio,at_least,2.0,79,0.7088607594936709,58,0.7241379310344828,0.5979510037164683,0.822477963192538
+turnovers,Turnovers,at_most,10,turnover_margin,Turnover margin,at_least,6,61,0.819672131147541,39,0.717948717948718,0.5622438267752261,0.8345667498605671
+offensive_rebound_pct,Offensive rebound %,at_least,0.375,rebound_margin,Rebound margin,at_least,10,42,0.8333333333333334,41,0.7073170731707317,0.5552024292386027,0.8239098236694112
+defensive_rebound_pct,Defensive rebound %,at_least,0.8,rebound_margin,Rebound margin,at_least,10,53,0.8301886792452831,43,0.6976744186046512,0.5489435424759017,0.8139817205381712
+turnovers,Turnovers,at_most,10,turnover_rate,Turnover rate,at_most,0.12,125,0.656,89,0.651685393258427,0.5482912406815135,0.7425266685315979
+fga_plus_fta_margin,FGA + FTA differential,at_least,10,possessions,Possessions,at_least,95,48,0.8125,39,0.6410256410256411,0.484178631846895,0.772581153035089
+steals,Steals,at_least,12,live_ball_turnovers_forced,Live-ball turnovers forced,at_least,12,65,0.7692307692307693,74,0.6081081081081081,0.4941931053499984,0.7113525155005493
+three_attempted,3PA,at_least,28,turnovers,Turnovers,at_most,10,42,0.6428571428571429,45,0.5777777777777777,0.433005327959445,0.7103151201831219
+three_attempted,3PA,at_least,28,turnover_rate,Turnover rate,at_most,0.12,46,0.6521739130434783,55,0.5636363636363636,0.43269584078681317,0.686267613639987
+fga_plus_fta,FGA + FTA,at_least,95,possessions,Possessions,at_least,95,48,0.6875,57,0.5614035087719298,0.43277781142939187,0.6822750471410599
+three_attempted,3PA,at_least,28,possessions,Possessions,at_least,95,43,0.5581395348837209,56,0.5178571428571429,0.3901016225125491,0.6433199437557326
+possessions,Possessions,at_least,95,defensive_rebound_pct,Defensive rebound %,at_least,0.8,41,0.8048780487804879,28,0.42857142857142855,0.2650829618073122,0.609295210143846

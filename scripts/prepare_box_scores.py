@@ -12,6 +12,9 @@ pilots={}
 if pilot_path.exists():
     pilot=json.loads(pilot_path.read_text(encoding="utf-8"))
     pilots[pilot["game_id"]]=pilot
+current_lineups=ROOT/"app/current-season-lineups.json"
+if current_lineups.exists():
+    pilots.update({g["game_id"]:g for g in json.loads(current_lineups.read_text())})
 plus_minus_path=ROOT/"app/player-plus-minus-collection.json"
 plus_minus_games={}
 if plus_minus_path.exists():
@@ -38,8 +41,11 @@ with (PROCESSED/"player_game_stats.csv").open(newline="",encoding="utf-8-sig") a
         players[row["game_id"]].append(cleaned)
 
 records=[]
+notes_path=ROOT/"app/current-season-source-notes.json"
+source_notes=json.loads(notes_path.read_text()) if notes_path.exists() else {}
 for game in games:
     game={**game,"score_1":number(game["score_1"]),"score_2":number(game["score_2"])}
+    game["source_note"]=source_notes.get(game["game_id"],"")
     game["logo_1"]=logos.get(game["team_1"],"")
     game["logo_2"]=logos.get(game["team_2"],"")
     pilot=pilots.get(game["game_id"])

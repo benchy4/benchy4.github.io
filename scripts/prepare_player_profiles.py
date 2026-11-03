@@ -214,10 +214,17 @@ for bio in BIOS:
              "play_types":[{**r,"player_name":bio["name"]} for r in DEFENSE["play_types"] if canonical_player(r["player_name"])==bio["name"]],
              "shot_types":[{**r,"player_name":bio["name"]} for r in DEFENSE["shot_types"] if canonical_player(r["player_name"])==bio["name"]]}
     foul_risk=[{**r,"player_name":bio["name"]} for r in FOUL_RISK["records"] if canonical_player(r["player_name"])==bio["name"]]
-    latest_team=next((x["team"] for x in reversed(player_logs) if x["season"]=="2025-26"),player_logs[-1]["team"] if player_logs else "—")
+    latest_team=next((x["team"] for x in reversed(player_logs) if x["season"]==max(r["season"] for r in player_logs)),player_logs[-1]["team"] if player_logs else "—")
     profiles.append({**bio,"team":latest_team,"season_stats":seasons,"game_log":list(reversed(player_logs)),"career":career,"defense":defense,"foul_risk":foul_risk,**analyses})
 
 slugs={x["name"]:x["slug"] for x in BIOS}
+photo_audit=ROOT/"app/wnbl-player-photo-audit.json"
+if photo_audit.exists():
+    photos={canonical_player(row["player"]):row for row in json.loads(photo_audit.read_text())["matched"]}
+    for profile in profiles:
+        matched=photos.get(profile["name"])
+        if matched and (ROOT/"static/player-photos"/matched["file"]).is_file():
+            profile.update(photo="player-photos/"+matched["file"],source=matched["source"],bio_status="Official WNBL profile matched")
 for alias,target in ALIASES.items():slugs[alias]=slugs[target]
 out={"profiles":profiles,"slugs":slugs,"aliases":ALIASES,"foul_risk_meta":FOUL_RISK["meta"],"win_shares_meta":json.loads((ROOT/"app/win-shares.json").read_text(encoding="utf-8"))["meta"],"stat_source":"Hudl/InStat box scores collected in the WNBL dataset"}
 (ROOT/"app/player-profiles.json").write_text(json.dumps(out,separators=(",",":"),ensure_ascii=False),encoding="utf-8")
