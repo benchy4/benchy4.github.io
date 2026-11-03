@@ -44,6 +44,12 @@ test('refreshes analytical families and current team records',async()=>{
   const tasmania=teams.profiles.find(t=>t.slug==='tasmania-jewels');
   assert.equal(tasmania.season_stats[0].games,3);
   assert.equal(tasmania.season_stats[0].wins,2);
+  const profiles=await read('player-profiles');
+  for(const [alias,name] of [['Abbey Wehrung','Abigail Wehrung'],['Alexandra Sharp','Alex Sharp']]){
+    assert.equal(profiles.aliases[alias],name);
+    assert.ok(!profiles.profiles.some(p=>p.name===alias));
+    assert.ok(profiles.profiles.find(p=>p.name===name).season_stats.some(r=>r.season===current));
+  }
 });
 
 test('preserves the public Index address and offers the current-season filter',async()=>{

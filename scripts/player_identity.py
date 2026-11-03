@@ -7,6 +7,8 @@ ALIASES={
  "Kristy Anne Wallace":"Kristy Wallace",
  "Caitlin Martin":"Caitlyn Martin",
  "Xu Han":"Han Xu",
+ "Abbey Wehrung":"Abigail Wehrung",
+ "Alexandra Sharp":"Alex Sharp",
 }
 
 def canonical_player(name):

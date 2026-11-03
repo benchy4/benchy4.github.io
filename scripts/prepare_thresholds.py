@@ -243,8 +243,8 @@ write_csv("combination_rules.csv", pairs)
     f"- {len(team_games) // 2} games and {len(team_games)} paired team-game rows.\n"
     "- Five chronological rolling folds: each season from 2021–22 onward is predicted only from earlier seasons.\n"
     "- A monotonic continuous probability curve is fitted separately for every statistic.\n"
-    "- The displayed seven-season curve is refitted only after rolling validation is complete.\n"
-    "- Coaching cut-offs are the least extreme natural increment where both the rolling estimate and the final seven-season estimate reach a 70% win rate, the observed rolling rate is at least 65%, and the model-to-observed gap is no more than eight percentage points. Each also requires at least 40 team-games and three represented validation seasons.\n"
+    "- The displayed all-season curve is refitted only after rolling validation is complete.\n"
+    "- Coaching cut-offs are the least extreme natural increment where both the rolling estimate and the final all-season estimate reach a 70% win rate, the observed rolling rate is at least 65%, and the model-to-observed gap is no more than eight percentage points. Each also requires at least 40 team-games and three represented validation seasons.\n"
     "- Confidence intervals resample whole games, keeping the two opposing team rows together.\n"
     "- Results remain descriptive associations; outcome-adjacent measures such as points and efficiency are not causal targets.\n",
     encoding="utf-8",

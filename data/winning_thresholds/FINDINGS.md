@@ -3,7 +3,7 @@
 - Complete games: 608
 - Team-game observations: 1216
 - Discovery seasons: 2019–20 through 2022–23
-- Validation seasons: 2023–24 through 2025–26
+- Validation seasons: 2023–24 through 2026–27 (in progress)
 
 ## Strongest held-out single-stat thresholds
 

@@ -47,7 +47,7 @@ test("provides a standalone, searchable player statistics page",async()=>{
 });
 
 test("creates all player profiles and supplies integrated creation data",async()=>{
-  const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8"));assert.equal(profiles.profiles.length,391);
+  const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8"));assert.equal(profiles.profiles.length,389);
   for(const slug of ["abbey-ellis","miela-sowah","courtney-woods","alexandra-fowler"]){const{status,body}=await fetchPage(`player-${slug}.html`);assert.equal(status,200);const data=jsonScript(body,"profile-data");assert.equal(data.profiles[0].slug,slug);assert.ok(data.analysis);assert.ok(Array.isArray(data.analysis.creation));assert.ok(Array.isArray(data.analysis.connections));assert.ok(Array.isArray(data.analysis.development));assert.ok(body.includes("profile-analysis" )||body.includes("site-shell.js"));}
   const shell=(await fetchPage("site-shell.js")).body;for(const text of ["Creation and connections","Total points created","Creator–scorer connections","Season-to-season role change"])assert.ok(shell.includes(text),text);
 });

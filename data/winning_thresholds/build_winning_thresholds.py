@@ -147,7 +147,7 @@ write("team_game_metrics.csv",team_games);write("threshold_results.csv",results)
 best=sorted(selected,key=lambda r:(bool(r["validation_pass"]),r["validation_win_rate"]),reverse=True)
 with open(HERE/"FINDINGS.md","w",encoding="utf-8") as f:
     f.write("# Winning threshold findings\n\n")
-    f.write(f"- Complete games: {len(team_games)//2}\n- Team-game observations: {len(team_games)}\n- Discovery seasons: 2019–20 through 2022–23\n- Validation seasons: 2023–24 through 2025–26\n\n")
+    f.write(f"- Complete games: {len(team_games)//2}\n- Team-game observations: {len(team_games)}\n- Discovery seasons: 2019–20 through 2022–23\n- Validation seasons: 2023–24 through 2026–27 (in progress)\n\n")
     f.write("## Strongest held-out single-stat thresholds\n\n")
     for r in best[:12]:
         op="at least" if r["direction"]=="at_least" else "at most"
@@ -159,7 +159,7 @@ with open(HERE/"VALIDATION_REPORT.md","w",encoding="utf-8") as f:
     f.write("- Threshold candidates are limited to the central 10th–90th percentile range and natural metric increments.\n")
     f.write("- Selection requires at least 40 discovery and 25 validation observations, with no more than 80% overall coverage.\n")
     f.write("- Wilson intervals and Benjamini–Hochberg q-values are supplied.\n")
-    f.write("- Earlier four seasons are used for threshold discovery; the latest three seasons are held out for validation.\n")
+    f.write("- Earlier four seasons are used for threshold discovery; later seasons are held out for validation.\n")
     f.write("- Combination rules require at least 40 discovery and 20 validation observations.\n")
     f.write("- Results are observational. Opponent quality, roster strength and game context remain possible confounders.\n")
 print({"team_games":len(team_games),"thresholds":len(results),"selected":len(selected),"pairs":len(pairs)})
