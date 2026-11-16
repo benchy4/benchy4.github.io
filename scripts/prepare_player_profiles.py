@@ -1,4 +1,4 @@
-import csv,hashlib,json,random,re
+import csv,hashlib,json,random,re,sys
 from collections import defaultdict
 from pathlib import Path
 from player_identity import ALIASES,canonical_player,player_aliases
@@ -101,12 +101,6 @@ with (PROCESSED/"player_plus_minus.csv").open(newline="",encoding="utf-8-sig") a
     for r in csv.DictReader(f):
         plus_minus[(r["game_id"],short(r["team"]),canonical_player(r["player"]))]=n(r["plus_minus"])
 
-WIN_SHARE_FIELDS=("offensive_rating","defensive_rating","offensive_win_shares","defensive_win_shares","win_shares","win_shares_per_40","team_win_share","adjustment_win_shares","adjusted_win_shares","adjusted_win_shares_per_40","adjusted_team_win_share")
-win_shares={}
-with (PROCESSED/"player_win_shares.csv").open(newline="",encoding="utf-8-sig") as f:
-    for r in csv.DictReader(f):
-        win_shares[(r["season"],r["team"],canonical_player(r["player"]))]={k:float(r[k]) for k in WIN_SHARE_FIELDS}
-
 logs=defaultdict(list)
 with (PROCESSED/"player_game_stats.csv").open(newline="",encoding="utf-8-sig") as f:
     for r in csv.DictReader(f):
@@ -124,6 +118,26 @@ with (PROCESSED/"player_game_stats.csv").open(newline="",encoding="utf-8-sig") a
             raise ValueError(f"Missing official plus/minus for {key}")
         row["plus_minus"]=plus_minus[key]
         row.update({k:n(r[k]) for k in COUNT});logs[player].append(row)
+
+# Build the independent same-game on/off input before Win Shares consumes it.
+if "--on-off-only" in sys.argv:
+    on_off_rows=[]
+    for player, player_logs in logs.items():
+        grouped=defaultdict(list)
+        for row in player_logs:grouped[(row["season"],row["team"])].append(row)
+        for (season,team), rows in sorted(grouped.items()):
+            on_off_rows.append({"player":player,"season":season,"team":team,"games":len(rows),**on_off_metrics(rows,f"{player}|{season}|{team}")})
+    fields=["player","season","team","games","on_minutes","off_minutes","on_plus_minus","off_plus_minus","on_plus_minus_per_40","off_plus_minus_per_40","on_off_plus_minus_per_40","team_relative_plus_minus_per_40","on_off_ci_low","on_off_ci_high","on_off_sample"]
+    with (PROCESSED/"player_same_game_on_off.csv").open("w",newline="",encoding="utf-8") as f:
+        writer=csv.DictWriter(f,fieldnames=fields,extrasaction="ignore");writer.writeheader();writer.writerows(on_off_rows)
+    print(f"Built {len(on_off_rows)} same-game on/off inputs")
+    sys.exit(0)
+
+WIN_SHARE_FIELDS=("offensive_rating","defensive_rating","offensive_win_shares","defensive_win_shares","win_shares","win_shares_per_40","team_win_share","adjustment_win_shares","adjusted_win_shares","adjusted_win_shares_per_40","adjusted_team_win_share")
+win_shares={}
+with (PROCESSED/"player_win_shares.csv").open(newline="",encoding="utf-8-sig") as f:
+    for r in csv.DictReader(f):
+        win_shares[(r["season"],r["team"],canonical_player(r["player"]))]={k:float(r[k]) for k in WIN_SHARE_FIELDS}
 
 event_groups={"play_type":defaultdict(lambda:defaultdict(lambda:{"opportunities":0,"attempts":0,"makes":0,"fouls_drawn":0,"points":0})),
               "shot_type":defaultdict(lambda:defaultdict(lambda:{"opportunities":0,"attempts":0,"makes":0,"fouls_drawn":0,"points":0}))}

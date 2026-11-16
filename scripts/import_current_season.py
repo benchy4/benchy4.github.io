@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CAPTURE = ROOT.parent / "outputs/season-update-2026-27"
 SEASON = "2026-27"
 SOURCE_NOTES = {"2497248": "InStat source discrepancy: Sydney's player box score totals 93 points, including 18 for Shuyu Yang, while the final score, play-by-play and lineups record 95 (20 for Yang in the event log). Player figures are preserved as published; team results use the verified 95–68 final score."}
+SOURCE_NOTES["2497264"] = "InStat source discrepancy: Sydney’s player box score totals 84 points, including 16 for Lauren Nicholson (2/2 FT), while the final score, periods, play-by-play and lineups record 86. Nicholson has four made free throws and 18 points in the event log. Player figures are preserved as published; team results use the verified 86–69 final score."
 FIELDS = ["MinutesMIN", "PointsPT", "Field goals madeFG+", "Field goals attemptedFG",
           "Field goals, %FG%", "3-pt field goals made3PT+", "3-pt field goals attempted3PT",
           "3-pt field goals, %3PT%", "Free throws madeFT+", "Free throws attemptedFT",
@@ -24,9 +25,12 @@ def seconds(value):
     return int(m) * 60 + int(s)
 
 def convert(g):
+    g = {**g, "gameId": str(g["gameId"])}
     scores = list(map(int, re.search(r"(\d+):(\d+)", g["heading"]).groups()))
     date = datetime.strptime(g["date"], "%m.%d.%Y").date().isoformat()
     result = {k: g[k] for k in ["gameId", "sourceUrl", "date", "heading", "teams", "periodScores", "teamStats", "pbp", "playerLinks"]}
+    if result["teamStats"] and isinstance(result["teamStats"][0], list):
+        result["teamStats"] = [{"rows": result["teamStats"]}]
     result["playerTables"] = []
     pm = dict(season=SEASON, game_id=g["gameId"], game_date=date,
               team_1=g["teams"][0], team_2=g["teams"][1], score_1=scores[0], score_2=scores[1],
@@ -55,6 +59,8 @@ def convert(g):
         player_points = sum(number(r[3]) for r in out[1:])
         if g["gameId"] == "2497248" and i == 0:
             assert (player_points, scores[i]) == (93, 95), "Recheck the known source discrepancy"
+        elif g["gameId"] == "2497264" and i == 0:
+            assert (player_points, scores[i]) == (84, 86), "Recheck the known Nicholson source discrepancy"
         else:
             assert player_points == scores[i], (g["gameId"], "player points")
         # InStat's video-coded intervals can omit a few seconds at period edges.
@@ -111,10 +117,11 @@ def main():
     expected = {(datetime.fromtimestamp(m["starts_at_ms"] / 1000, ZoneInfo("Australia/Brisbane")).date().isoformat(), club(m["home"]["name"]), club(m["away"]["name"]), m["home_score"], m["away_score"]) for m in official}
     actual = {(g["game_date"], club(g["team_1"]), club(g["team_2"]), g["score_1"], g["score_2"]) for g in plus_minus}
     assert expected == actual, ("Official schedule mismatch", expected - actual, actual - expected)
-    print("All 17 dates, opponents and final scores match the official WNBL schedule.")
+    print(f"All {len(games)} dates, opponents and final scores match the official WNBL schedule.")
+    assert games and len(games) == len(official), "All completed games must pass validation before import"
+    assert len({g["gameId"] for g in games}) == len(games), "Duplicate captured game IDs"
     if "--check" in sys.argv:
         return
-    assert len(games) == 17, "All 17 games must pass validation before import"
     (CAPTURE / "collector-input.json").write_text(json.dumps(games, ensure_ascii=False))
     pm_path = ROOT / "app/player-plus-minus-collection.json"
     existing = json.loads(pm_path.read_text())

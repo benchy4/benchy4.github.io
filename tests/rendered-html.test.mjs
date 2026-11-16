@@ -43,11 +43,11 @@ test("keeps decision tools as dedicated pages",async()=>{
 test("provides a standalone, searchable player statistics page",async()=>{
   const{status,body}=await fetchPage("player-statistics.html");assert.equal(status,200);
   for(const text of ["Player statistics","Box stats","Advanced","Player name","Total points created","Creation dependency"])assert.ok(body.includes(text),text);
-  const data=jsonScript(body,"player-table-data");assert.equal(data.players.length,864);assert.equal(data.seasons.length,8);assert.ok(Object.keys(data.slugs).length>=360);
+  const data=jsonScript(body,"player-table-data");assert.equal(data.players.length,875);assert.equal(data.seasons.length,8);assert.ok(Object.keys(data.slugs).length>=360);
 });
 
 test("creates all player profiles and supplies integrated creation data",async()=>{
-  const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8"));assert.equal(profiles.profiles.length,389);
+  const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8"));assert.equal(profiles.profiles.length,394);
   for(const slug of ["abbey-ellis","miela-sowah","courtney-woods","alexandra-fowler"]){const{status,body}=await fetchPage(`player-${slug}.html`);assert.equal(status,200);const data=jsonScript(body,"profile-data");assert.equal(data.profiles[0].slug,slug);assert.ok(data.analysis);assert.ok(Array.isArray(data.analysis.creation));assert.ok(Array.isArray(data.analysis.connections));assert.ok(Array.isArray(data.analysis.development));assert.ok(body.includes("profile-analysis" )||body.includes("site-shell.js"));}
   const shell=(await fetchPage("site-shell.js")).body;for(const text of ["Creation and connections","Total points created","Creator–scorer connections","Season-to-season role change"])assert.ok(shell.includes(text),text);
 });
@@ -69,14 +69,14 @@ test("fixes the global dropdown menu and exposes every section",async()=>{
 
 test("retains complete team, league and box-score pages",async()=>{
   for(const path of ["team-statistics.html","league-statistics.html","box-score-finder.html","team-townsville-fire.html","player-abbey-ellis.html"]){const{status,body}=await fetchPage(path);assert.equal(status,200,path);assert.ok(body.includes("site-shell.js"),path);assert.ok(body.includes("table-enhancements.js"),path)}
-  const boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8"));assert.equal(boxes.games.length,610);const game=boxes.games.find(g=>g.players.length);const page=await fetchPage(`box-score-${game.game_id}.html`);assert.equal(page.status,200);assert.ok(page.body.includes(game.team_1)&&page.body.includes(game.team_2));
+  const boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8"));assert.equal(boxes.games.length,620);const game=boxes.games.find(g=>g.players.length);const page=await fetchPage(`box-score-${game.game_id}.html`);assert.equal(page.status,200);assert.ok(page.body.includes(game.team_1)&&page.body.includes(game.team_2));
   for(const token of ["Final · WNBL","Away","Home","Box score","Team total","made-attempted","['fg','FG']","['three','3PT']","['ft','FT']"])assert.ok(page.body.includes(token),token);
   for(const removed of ["Team comparison","Game leaders","insightGrid","metricBars"])assert.ok(!page.body.includes(removed),removed);
 });
 
 test("retains the validated eight-season analysis datasets",async()=>{
   const d=JSON.parse(await readFile(new URL("../app/data.json",import.meta.url),"utf8")),deep=JSON.parse(await readFile(new URL("../app/deep-dives.json",import.meta.url),"utf8"));
-  assert.deepEqual(d.meta.seasons,["2019-20","2020","2021-22","2022-23","2023-24","2024-25","2025-26","2026-27"]);assert.equal(d.meta.games,608);assert.equal(d.meta.possessions,109112.4);assert.equal(d.meta.possession_definition,"Possessions used for PPP calculations");assert.equal(d.players.length,864);assert.equal(d.teams.length,65);
+  assert.deepEqual(d.meta.seasons,["2019-20","2020","2021-22","2022-23","2023-24","2024-25","2025-26","2026-27"]);assert.equal(d.meta.games,618);assert.equal(d.meta.possessions,110902.7);assert.equal(d.meta.possession_definition,"Possessions used for PPP calculations");assert.equal(d.players.length,875);assert.equal(d.teams.length,65);
   assert.equal(deep.dependence.length,65);assert.equal(deep.runs.length,65);assert.equal(deep.sustainability.length,65);assert.equal(deep.continuity.length,48);assert.equal(deep.continuity_bins.length,3);assert.equal(deep.continuity_sensitivity.length,3);assert.equal(deep.identity_audit.length,7);assert.ok(deep.connections.length>4000);assert.ok(deep.creation_dependency.length>800);assert.ok(deep.score_pressure.length>300);assert.ok(deep.quarter_profiles.length>200);assert.ok(deep.development.length>250);
 });
 
@@ -167,7 +167,7 @@ test("adds category tabs to site search and simplifies game-state evidence",asyn
 });
 
 test("adds rotation compression and a reconciled plus-minus lineup pilot",async()=>{
-  const rotation=await fetchPage("rotation-compression.html"),rotationData=jsonScript(rotation.body,"rotation-data");assert.equal(rotation.status,200);assert.equal(rotationData.meta.team_games,1210);assert.equal(rotationData.meta.games,605);assert.equal(rotationData.meta.seasons.length,8);assert.equal(rotationData.bands.length,4);assert.equal(rotationData.team_games.length,1210);for(const token of ["Rotation compression","Top 5 MIN%","q4_net_ppp","Final margin within 10"])assert.ok(rotation.body.includes(token),token);
+  const rotation=await fetchPage("rotation-compression.html"),rotationData=jsonScript(rotation.body,"rotation-data");assert.equal(rotation.status,200);assert.equal(rotationData.meta.team_games,1230);assert.equal(rotationData.meta.games,615);assert.equal(rotationData.meta.seasons.length,8);assert.equal(rotationData.bands.length,4);assert.equal(rotationData.team_games.length,1230);for(const token of ["Rotation compression","Top 5 MIN%","q4_net_ppp","Final margin within 10"])assert.ok(rotation.body.includes(token),token);
   const box=await fetchPage("box-score-2357804.html"),boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8")),game=boxes.games.find(g=>g.game_id==="2357804");assert.equal(box.status,200);assert.equal(game.players.filter(r=>r.plus_minus!=null).length,18);assert.equal(game.lineups.length,31);assert.equal(game.lineup_validation.player_plus_minus_reconciles,true);assert.equal(game.lineup_validation.lineup_plus_minus_reconciles,true);for(const token of ["Official five-player combinations","Player and lineup plus/minus reconcile","PTS allowed","ORtg","DRtg","+/-"])assert.ok(box.body.includes(token),token);
   const team=(await fetchPage("team-townsville-fire.html")).body,teamData=jsonScript(team,"team-data"),shell=(await fetchPage("site-shell.js")).body;assert.equal(teamData.analysis.rotation.length,8);for(const token of ["rotation-compression.html","Top 5 MIN%","Players used"])assert.ok(shell.includes(token),token);
   const index=JSON.parse((await fetchPage("site-index.json")).body);assert.ok(index.some(x=>x.href==="rotation-compression.html"));
@@ -176,7 +176,7 @@ test("adds rotation compression and a reconciled plus-minus lineup pilot",async(
 test("integrates official player plus-minus across all collected seasons",async()=>{
   const boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8"));
   const available=boxes.games.filter(g=>g.plus_minus_status==="complete"),unavailable=boxes.games.filter(g=>g.plus_minus_status.startsWith("unavailable"));
-  assert.equal(available.length,608);assert.deepEqual(unavailable.map(g=>g.game_id).sort(),["236477","831081"]);
+  assert.equal(available.length,618);assert.deepEqual(unavailable.map(g=>g.game_id).sort(),["236477","831081"]);
   assert.equal(available.flatMap(g=>g.players).filter(r=>r.plus_minus==null).length,0);
   assert.ok(available.every(g=>g.plus_minus_validation==="pass"));
   const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8"));
@@ -191,12 +191,12 @@ test("shows all six same-game on-off measures and preserves lineup coverage",asy
   assert.equal(courtney.games,23);assert.ok(Math.abs(courtney.on_minutes-706.48)<.02);assert.ok(Math.abs(courtney.off_minutes-218.52)<.02);assert.ok(Math.abs(courtney.on_plus_minus_per_40-15.46)<.02);assert.ok(Math.abs(courtney.off_plus_minus_per_40-2.75)<.02);assert.ok(Math.abs(courtney.on_off_plus_minus_per_40-12.71)<.02);assert.ok(Math.abs(courtney.team_relative_plus_minus_per_40-3.72)<.02);assert.ok(Number.isFinite(courtney.on_off_ci_low)&&Number.isFinite(courtney.on_off_ci_high));assert.equal(courtney.on_off_sample,"Strong");
   const teamData=JSON.parse(await readFile(new URL("../app/team-profiles.json",import.meta.url),"utf8")),teamCourtney=teamData.profiles.find(t=>t.slug==="townsville-fire").players.find(r=>r.season==="2025-26"&&r.player_name==="Courtney Woods");assert.ok(Math.abs(teamCourtney.on_off_plus_minus_per_40-12.71)<.02);
   for(const path of ["player-courtney-woods.html","team-townsville-fire.html","player-statistics.html"]){const body=(await fetchPage(path)).body;for(const token of ["On +/- / 40","Off +/- / 40","On/off / 40","+/-"])assert.ok(body.includes(token),`${path}: ${token}`);for(const removed of ["Team-relative / 40","On MIN","Off MIN","95% low","95% high","Uncertainty","Stronger sample","Moderate sample","Low sample"])assert.ok(!body.includes(removed),`${path}: ${removed}`)}
-  const boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8")),lineupGames=boxes.games.filter(g=>Array.isArray(g.lineups)&&g.lineups.length);assert.equal(lineupGames.length,18);assert.equal(lineupGames[0].game_id,"2357804");
+  const boxes=JSON.parse(await readFile(new URL("../app/box-scores.json",import.meta.url),"utf8")),lineupGames=boxes.games.filter(g=>Array.isArray(g.lineups)&&g.lineups.length);assert.equal(lineupGames.length,28);assert.equal(lineupGames[0].game_id,"2357804");
 });
 
 test("calculates and displays traditional and WNBL-adjusted Win Shares",async()=>{
   const winShares=JSON.parse(await readFile(new URL("../app/win-shares.json",import.meta.url),"utf8"));
-  assert.equal(winShares.meta.player_seasons,864);assert.equal(winShares.meta.team_seasons,65);assert.equal(winShares.records.length,864);
+  assert.equal(winShares.meta.player_seasons,875);assert.equal(winShares.meta.team_seasons,65);assert.equal(winShares.records.length,875);
   for(const row of winShares.records){for(const key of ["offensive_win_shares","defensive_win_shares","win_shares","win_shares_per_40","adjusted_win_shares","adjusted_win_shares_per_40"])assert.ok(Number.isFinite(row[key]),`${row.player}: ${key}`);assert.ok(Math.abs(row.win_shares-row.offensive_win_shares-row.defensive_win_shares)<1e-9,row.player)}
   assert.ok(winShares.reconciliation.every(row=>Math.abs(row.adjusted_player_win_shares-row.player_win_shares)<1e-9));
   const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8")),alicia=profiles.profiles.find(p=>p.name==="Alicia Froling").season_stats.find(r=>r.season==="2025-26"&&r.team==="Townsville");
@@ -207,7 +207,7 @@ test("calculates and displays traditional and WNBL-adjusted Win Shares",async()=
 
 test("merges Xu Han into Han Xu and keeps the old address usable",async()=>{
   const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8")),han=profiles.profiles.filter(p=>p.name==="Han Xu"),xu=profiles.profiles.filter(p=>p.name==="Xu Han");
-  assert.equal(han.length,1);assert.equal(xu.length,0);assert.equal(han[0].game_log.length,21);assert.equal(han[0].season_stats.length,2);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").games,18);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").points,292);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").plus_minus,229);
+  assert.equal(han.length,1);assert.equal(xu.length,0);assert.equal(han[0].game_log.length,23);assert.equal(han[0].season_stats.length,2);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").games,18);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").points,292);assert.equal(han[0].season_stats.find(r=>r.season==="2025-26").plus_minus,229);
   const winShares=JSON.parse(await readFile(new URL("../app/win-shares.json",import.meta.url),"utf8"));assert.equal(winShares.records.filter(r=>r.player==="Han Xu").length,2);assert.equal(winShares.records.filter(r=>r.player==="Xu Han").length,0);
   const canonical=await fetchPage("player-han-xu.html"),alias=await fetchPage("player-xu-han.html");assert.equal(canonical.status,200);assert.equal(alias.status,200);assert.ok(canonical.body.includes('"name":"Han Xu"'));assert.ok(alias.body.includes("player-han-xu.html"));
 });

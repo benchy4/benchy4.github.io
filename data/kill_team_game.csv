@@ -775,6 +775,26 @@ season,game_id,team_id,team,kills,had_kill,won
 2026-27,2497259,team_c51f6c2fb8,Geelong Venom,7,True,True
 2026-27,2497260,team_e49084a18e,Perth Lynx,4,True,False
 2026-27,2497260,team_626dba9359,Townsville Fire,7,True,True
+2026-27,2497261,team_626dba9359,Townsville Fire,8,True,True
+2026-27,2497261,team_c51f6c2fb8,Geelong Venom,6,True,False
+2026-27,2497262,team_454fef3ef9,Adelaide Lightning,9,True,True
+2026-27,2497262,team_ac2feea530,Tasmania Jewels,3,True,False
+2026-27,2497263,team_f8bd570511,Bendigo Spirit,4,True,False
+2026-27,2497263,team_4582b92893,University of Canberra Capitals,5,True,True
+2026-27,2497264,team_d331fde894,Sydney Flames,7,True,True
+2026-27,2497264,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2026-27,2497265,team_f8bd570511,Bendigo Spirit,6,True,False
+2026-27,2497265,team_e49084a18e,Perth Lynx,5,True,True
+2026-27,2497266,team_9428352aca,Southside Melbourne Flyers,5,True,False
+2026-27,2497266,team_ac2feea530,Tasmania Jewels,6,True,True
+2026-27,2497267,team_c51f6c2fb8,Geelong Venom,3,True,False
+2026-27,2497267,team_e49084a18e,Perth Lynx,6,True,True
+2026-27,2497268,team_d331fde894,Sydney Flames,4,True,False
+2026-27,2497268,team_f8bd570511,Bendigo Spirit,9,True,True
+2026-27,2497269,team_9428352aca,Southside Melbourne Flyers,4,True,False
+2026-27,2497269,team_e49084a18e,Perth Lynx,9,True,True
+2026-27,2497270,team_626dba9359,Townsville Fire,9,True,True
+2026-27,2497270,team_4582b92893,University of Canberra Capitals,7,True,False
 2019-20,328617,team_4582b92893,University of Canberra Capitals,7,True,True
 2019-20,328617,team_c51f6c2fb8,Geelong Venom,6,True,False
 2019-20,328618,team_9428352aca,Southside Melbourne Flyers,8,True,True

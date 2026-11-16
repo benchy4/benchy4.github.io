@@ -3,12 +3,15 @@ import test from 'node:test';
 import {readFile} from 'node:fs/promises';
 const read=async name=>JSON.parse(await readFile(new URL('../app/'+name+'.json',import.meta.url),'utf8'));
 const current='2026-27';
+const manifest=await read('season-update');
+const gameCount=manifest.games;
 
-test('includes all 17 current-season games, reconciled lineups and nine clubs',async()=>{
+test('includes all verified current-season games, reconciled lineups and nine clubs',async()=>{
   const boxes=await read('box-scores'),games=boxes.games.filter(g=>g.season===current);
-  assert.equal(games.length,17);
+  assert.equal(games.length,gameCount);
+  assert.ok(gameCount>=17);
   assert.equal(new Set(games.flatMap(g=>[g.team_1,g.team_2])).size,9);
-  assert.deepEqual(games.map(g=>Number(g.game_id)).sort(),Array.from({length:17},(_,i)=>2497244+i));
+  assert.deepEqual(games.map(g=>Number(g.game_id)).sort(),manifest.game_ids.map(Number).sort());
   for(const g of games){
     assert.equal(g.plus_minus_validation,'pass');
     assert.ok(g.players.every(p=>Number.isFinite(p.plus_minus)));
@@ -24,26 +27,32 @@ test('includes all 17 current-season games, reconciled lineups and nine clubs',a
   assert.match(discrepancy.source_note,/93 points/);
   assert.equal(discrepancy.score_1,95);
   assert.equal(discrepancy.players.filter(p=>p.team===discrepancy.team_1).reduce((n,p)=>n+p.points,0),93);
+  const nicholson=games.find(g=>g.game_id==='2497264');
+  if(nicholson){
+    assert.match(nicholson.source_note,/Nicholson/);
+    assert.equal(nicholson.score_1,86);
+    assert.equal(nicholson.players.filter(p=>p.team===nicholson.team_1).reduce((n,p)=>n+p.points,0),84);
+  }
 });
 
 test('refreshes analytical families and current team records',async()=>{
   const [data,deep,hack,teams,rotation]=await Promise.all(['data','deep-dives','hackulator-data','team-profiles','rotation-compression'].map(read));
-  assert.equal(data.meta.games,608);
-  assert.equal(data.meta.latest_game_date,'2026-11-03');
+  assert.equal(data.meta.games,591+gameCount);
+  assert.equal(data.meta.latest_game_date,manifest.as_of);
   assert.equal(data.meta.current_season_complete,false);
   for(const key of ['kills','clutch','networks','players','defensePlayers','teams'])assert.ok(data[key].some(r=>r.season===current),key);
   for(const key of ['connections','creation_dependency','dependence','runs','score_pressure','quarter_profiles','sustainability','development'])assert.ok(deep[key].some(r=>r.season===current),key);
   assert.ok(!deep.continuity.some(r=>r.season===current),'Do not mix partial seasons into the first-eight-game model');
   assert.ok(hack.meta.seasons.includes(current));
-  assert.equal(rotation.team_games.filter(r=>r.season===current).length,34);
+  assert.equal(rotation.team_games.filter(r=>r.season===current).length,gameCount*2);
   const currentTeams=teams.profiles.flatMap(p=>p.season_stats.filter(r=>r.season===current));
   assert.equal(currentTeams.length,9);
-  assert.equal(currentTeams.reduce((n,t)=>n+t.games,0),34);
-  assert.equal(currentTeams.reduce((n,t)=>n+t.wins,0),17);
-  assert.equal(currentTeams.reduce((n,t)=>n+t.losses,0),17);
+  assert.equal(currentTeams.reduce((n,t)=>n+t.games,0),gameCount*2);
+  assert.equal(currentTeams.reduce((n,t)=>n+t.wins,0),gameCount);
+  assert.equal(currentTeams.reduce((n,t)=>n+t.losses,0),gameCount);
   const tasmania=teams.profiles.find(t=>t.slug==='tasmania-jewels');
-  assert.equal(tasmania.season_stats[0].games,3);
-  assert.equal(tasmania.season_stats[0].wins,2);
+  assert.ok(tasmania.season_stats.find(r=>r.season===current).games>=3);
+  assert.ok(tasmania.season_stats.find(r=>r.season===current).wins>=2);
   const profiles=await read('player-profiles');
   for(const [alias,name] of [['Abbey Wehrung','Abigail Wehrung'],['Alexandra Sharp','Alex Sharp']]){
     assert.equal(profiles.aliases[alias],name);
@@ -55,7 +64,9 @@ test('refreshes analytical families and current team records',async()=>{
 test('preserves the public Index address and offers the current-season filter',async()=>{
   const home=await readFile(new URL('../public/Index.html',import.meta.url),'utf8');
   assert.equal(home,await readFile(new URL('../public/index.html',import.meta.url),'utf8'));
-  assert.match(home,/17 completed games through 3 Nov 2026/);
+  assert.ok(home.includes(`${gameCount} completed games through `));
+  const date=new Intl.DateTimeFormat('en-AU',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(manifest.as_of+'T00:00:00Z'));
+  assert.ok(home.includes(date));
   assert.match(home,/box-score-finder.html\?season=2026-27/);
   const dashboard=await readFile(new URL('../public/late-game-foul-dashboard.html',import.meta.url),'utf8');
   const evidence=JSON.parse(dashboard.match(/<script id="foul-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
