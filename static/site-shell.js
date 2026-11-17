@@ -2,6 +2,7 @@
 const navGroups=[
   ["Explore",[["Deep Dives","analysis-hub.html"],["League","league-statistics.html"],["Teams","team-statistics.html"],["Players","player-statistics.html"],["Box scores","box-score-finder.html"]]],
   ["Deep Dives",[
+    ["Shot maps","scouting.html?view=shots","Scouting"],["Pick-and-roll coverage","scouting.html?view=coverage","Scouting"],["Player on/off","scouting.html?view=impact","Scouting"],
     ["Assist chemistry","assist-chemistry.html","Creation & personnel"],["Player dependency","player-dependency.html","Creation & personnel"],["Roster continuity","roster-continuity.html","Creation & personnel"],["Rotation compression","rotation-compression.html","Creation & personnel"],["Performance change","player-development.html","Creation & personnel"],
     ["Scoring runs","scoring-runs.html","Game patterns & outcomes"],["Margin Impact","game-state-performance.html","Game patterns & outcomes"],["Result Variance","performance-variance.html","Game patterns & outcomes"],["Win thresholds","win-thresholds.html","Game patterns & outcomes"],
     ["Kills","kills-analysis.html","Defence & late game"],["Late-game fouling","late-game-analysis.html","Defence & late game"],
@@ -78,4 +79,46 @@ table(section.querySelector("#teamQuarters"),quarters,[{key:"season",label:"Seas
 }
 const render=isPlayer?renderPlayer:renderTeam;render();
 ["globalSeason","seasonSelect"].forEach(id=>document.getElementById(id)?.addEventListener("change",()=>setTimeout(render)));
+})();
+
+(() => {
+  const file = location.pathname.split('/').pop();
+  const family = /^(team|player|box-score)-/.exec(file)?.[1];
+  const id = {team:'team-data', player:'profile-data', 'box-score':'game-data'}[family];
+  if (!id || !document.getElementById(id)) return;
+  const payload = JSON.parse(document.getElementById(id).textContent);
+  const profile = payload.profiles?.length === 1 ? payload.profiles[0] : null;
+  if (family !== 'box-score' && !profile) return;
+  const main = document.querySelector('main');
+  if (!main) return;
+  const links = document.createElement('nav');
+  links.setAttribute('aria-label','Scouting shortcuts');
+  links.style.cssText = 'display:flex;flex-wrap:wrap;gap:1rem;padding:10px 4vw;font:600 14px system-ui;background:var(--purple-pale,#f5f0fa)';
+  main.before(links);
+  function update() {
+    links.replaceChildren();
+    const selected = document.querySelector('#globalSeason')?.value || document.querySelector('#seasonSelect')?.value;
+    const seasons = (profile?.season_stats || []).slice().sort((a,b)=>String(b.season).localeCompare(String(a.season)));
+    const current = seasons.find(r=>r.season===selected) || seasons[0];
+    const season = payload.season || current?.season;
+    if (!globalThis.WNBL_SCOUTING_SEASONS?.shots.includes(season)) { links.hidden=true; links.style.display='none'; return; }
+    links.hidden=false; links.style.display='flex';
+    const team = family==='box-score' ? payload.team_1 : family==='player' ? current.team : profile.name;
+    const teamName = /canberra|capitals/i.test(team) ? 'UCC' : team;
+    const add = (view,label) => {
+      const query = new URLSearchParams({view,season,team:teamName});
+      if (family==='player') query.set('player',profile.name);
+      if (family==='box-score') query.set('game',String(payload.game_id));
+      const link = document.createElement('a');
+      link.href='scouting.html?'+query;
+      link.textContent=label;
+      link.style.color='var(--purple-dark,#513272)';
+      links.append(link);
+    };
+    add('shots',family==='box-score'?'Game shot map':'Shot map');
+    if (family==='team' && globalThis.WNBL_SCOUTING_SEASONS.coverage.includes(season)) add('coverage','Pick-and-roll coverage');
+    if (family!=='box-score' && globalThis.WNBL_SCOUTING_SEASONS.impact.includes(season)) add('impact','Possession-based player on/off');
+  }
+  update();
+  document.addEventListener('change',e=>{if (['globalSeason','seasonSelect'].includes(e.target.id)) update();});
 })();
