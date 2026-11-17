@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scouting — WNBL Data</title>
+  <link rel="stylesheet" href="site-shell.css">
+  <link rel="stylesheet" href="visual-refresh-live.css">
+  <link rel="stylesheet" href="scouting.css">
+</head>
+<body>
+  <header class="scout-hero">
+    <a href="analysis-hub.html">Deep Dives</a>
+    <h1>Scouting</h1>
+  </header>
+  <main class="scout-main">
+    <nav id="views" aria-label="Scouting views">
+      <a href="?view=shots" data-view="shots">Shot maps</a>
+      <a href="?view=coverage" data-view="coverage">Pick-and-roll coverage</a>
+      <a href="?view=impact" data-view="impact">Player on/off</a>
+    </nav>
+    <div class="filters" id="scope"></div>
+    <div id="analysis" aria-busy="true"><p role="status">Loading scouting data…</p></div>
+    <p class="source">Game locations from the official WNBL feed. Coverage tags and five-player lineup totals from Hudl InStat. <a href="https://wnbl-edge-fire.sjsee.chatgpt.site/">Published source snapshot ↗</a></p>
+  </main>
+  <script src="site-shell.js"></script>
+  <script type="module" src="scouting.js"></script>
+</body>
+</html>
