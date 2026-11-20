@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compare WNBL players, teams and league seasons side by side, with per-game statistics, totals and shooting efficiency.">
+  <title>Compare players, teams and seasons — WNBL Data</title>
+  <link rel="stylesheet" href="comparison.css">
+</head>
+<body>
+  <main class="comparisonPage">
+    <header class="comparisonHero">
+      <p class="comparisonEyebrow">WNBL Data / Comparison</p>
+      <h1>Make the comparison.</h1>
+      <p>Players, teams and seasons. Put the numbers side by side.</p>
+    </header>
+    <nav class="comparisonModes" aria-label="Comparison type">
+      <a href="?mode=players" data-mode="players">Players</a>
+      <a href="?mode=teams" data-mode="teams">Teams</a>
+      <a href="?mode=seasons" data-mode="seasons">Seasons</a>
+    </nav>
+    <p id="comparisonHelp">Choose up to four entries. Each can use a different season.</p>
+    <div id="comparisonStatus" role="status" aria-live="polite">Loading comparison data…</div>
+    <div id="comparisonWorkspace" hidden>
+      <section aria-label="Comparison selections">
+        <div id="comparisonSlots" class="comparisonSlots"></div>
+        <div class="comparisonActions">
+          <button type="button" id="addComparison">Add comparison</button>
+          <button type="button" id="resetComparison">Reset</button>
+        </div>
+      </section>
+      <section aria-labelledby="comparisonHeading" class="comparisonResults">
+        <div class="comparisonToolbar">
+          <h2 id="comparisonHeading">Side by side</h2>
+          <label>Display<select id="comparisonBasis"><option value="game">Per game</option><option value="total">Totals</option></select></label>
+          <label>Statistics<select id="comparisonGroup"><option value="overview">Overview</option><option value="shooting">Shooting</option><option value="all">All statistics</option></select></label>
+          <button type="button" id="copyComparison">Copy link</button>
+          <button type="button" id="exportComparison">Export CSV</button>
+        </div>
+        <p id="comparisonContext"></p>
+        <p id="comparisonCoverage" class="comparisonCoverage"></p>
+        <div id="comparisonResults"></div>
+        <p class="comparisonLegend"><span aria-hidden="true">◆</span> Highlighted values lead the selected entries for that statistic; ties are highlighted together. Lower is better for turnovers, fouls, points allowed and defensive PPP. This is a statistical comparison, not an overall ranking.</p>
+      </section>
+      <details class="comparisonMethod">
+        <summary>How these comparisons work</summary>
+        <p>Player and team totals come from their existing season profiles. Player stints across multiple teams in a season are combined. Games, wins and losses stay as totals in either display.</p>
+        <p>League seasons pool all team box scores. Per-game figures are per team per game (total divided by team appearances); the games-played row counts each match once. League totals include both teams. Shooting percentages use total makes and attempts, never an average of percentages.</p>
+        <p>PPP uses the same possession denominators as the team profiles. Rates and percentages stay unchanged when switching to totals. A dash means no attempts or unavailable data. With two entries, the difference is B minus A; percentage differences are percentage points (pp).</p>
+      </details>
+    </div>
+    <noscript><p>Enable JavaScript to select and compare statistics.</p></noscript>
+  </main>
+  <script type="module" src="comparison.js"></script>
+</body>
+</html>

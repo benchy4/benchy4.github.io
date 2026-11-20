@@ -1,6 +1,6 @@
 (()=>{
 const navGroups=[
-  ["Explore",[["Deep Dives","analysis-hub.html"],["League","league-statistics.html"],["Teams","team-statistics.html"],["Players","player-statistics.html"],["Box scores","box-score-finder.html"]]],
+  ["Explore",[["Deep Dives","analysis-hub.html"],["League","league-statistics.html"],["Teams","team-statistics.html"],["Players","player-statistics.html"],["Compare","compare.html"],["Box scores","box-score-finder.html"]]],
   ["Deep Dives",[
     ["Shot maps","scouting.html?view=shots","Scouting"],["Pick-and-roll coverage","scouting.html?view=coverage","Scouting"],["Player on/off","scouting.html?view=impact","Scouting"],
     ["Assist chemistry","assist-chemistry.html","Creation & personnel"],["Player dependency","player-dependency.html","Creation & personnel"],["Roster continuity","roster-continuity.html","Creation & personnel"],["Rotation compression","rotation-compression.html","Creation & personnel"],["Performance change","player-development.html","Creation & personnel"],
@@ -11,7 +11,7 @@ const navGroups=[
 ];
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 const menuLinks=links=>{let section="";return links.map(([name,href,group])=>`${group&&group!==section?`<small>${section=group}</small>`:""}<a href="${href}">${name}</a>`).join("")};
-const shell=document.createElement("header");shell.className="globalShell";shell.innerHTML=`<a class="globalBrand" href="analysis-hub.html"><span class="globalBrandMark"><img src="fire-mark.png" alt=""></span>WNBL Data</a><button class="globalMobileButton" type="button" aria-label="Open navigation">Menu</button><nav class="globalNav" aria-label="Primary">${navGroups.map(([label,links])=>`<details><summary>${label}</summary><div class="globalMenuPanel">${links.some(link=>link[2])?menuLinks(links):`<small>${label}</small>${menuLinks(links)}`}</div></details>`).join("")}<button class="globalSearchButton" type="button">Search</button></nav>`;
+const shell=document.createElement("header");shell.className="globalShell";shell.innerHTML=`<a class="globalBrand" href="analysis-hub.html"><span class="globalBrandMark"><img src="fire-mark.png" alt=""></span>WNBL Data</a><button class="globalMobileButton" type="button" aria-label="Open navigation">Menu</button><nav class="globalNav" aria-label="Primary">${navGroups.map(([label,links])=>`<details><summary>${label}</summary><div class="globalMenuPanel">${links.some(link=>link[2])?menuLinks(links):`<small>${label}</small>${menuLinks(links)}`}</div></details>`).join("")}<a class="globalDirect" href="compare.html">Compare</a><button class="globalSearchButton" type="button">Search</button></nav>`;
 document.body.prepend(shell);
 document.querySelectorAll('a[href="analysis-hub.html#players"]').forEach(a=>{a.href="player-statistics.html";a.textContent=a.textContent.replace("Player Lab","Player statistics")});
 document.querySelectorAll('a[href="analysis-hub.html#teams"]').forEach(a=>{a.href="team-statistics.html";a.textContent=a.textContent.replace("Analysis Hub","Team statistics")});
@@ -44,7 +44,7 @@ function csvExport(table){const rows=[...table.rows].map(r=>visibleIndexes(table
 function compareTray(){let tray=document.querySelector(".compareTray");if(tray)return tray;tray=document.createElement("aside");tray.className="compareTray";tray.innerHTML=`<div class="compareTrayHead"><strong>Comparison</strong><button type="button">Clear</button></div><div class="compareGrid"></div>`;document.body.append(tray);tray.querySelector("button").onclick=()=>{document.querySelectorAll(".compareSelected").forEach(r=>r.classList.remove("compareSelected"));tray.classList.remove("open")};return tray}
 function updateCompare(table){const selected=[...table.tBodies].flatMap(b=>[...b.rows]).filter(r=>r.classList.contains("compareSelected")).slice(0,5),tray=compareTray(),grid=tray.querySelector(".compareGrid"),headers=[...table.tHead.rows[0].cells].map(cellText),vis=visibleIndexes(table);tray.classList.toggle("open",selected.length>0);grid.innerHTML=selected.map(r=>`<div class="compareCard"><b>${esc(cellText(r.cells[0]))}</b>${vis.slice(1,9).map(i=>`<div class="compareMetric"><span>${esc(headers[i])}</span><strong>${esc(cellText(r.cells[i]))}</strong></div>`).join("")}</div>`).join("")}
 function enhanceTable(table){if(table.dataset.toolsReady)return;table.dataset.toolsReady="1";const wrap=table.closest(".tableWrap")||table.parentElement,tools=document.createElement("div");tools.className="tableTools";tools.innerHTML=`<label>Columns <select><option value="overview">Overview</option><option value="shooting">Shooting</option><option value="rebounding">Rebounding</option><option value="possession">Possession</option><option value="advanced">Advanced</option><option value="all" selected>All columns</option></select></label><details class="columnChooser"><summary>Choose columns</summary><div class="columnPanel"></div></details><button type="button" data-action="compare">Compare rows</button><button type="button" data-action="export">Export CSV</button><span class="tableCount">${table.tBodies[0]?.rows.length||0} rows</span>`;wrap.before(tools);const select=tools.querySelector("select"),panel=tools.querySelector(".columnPanel");select.onchange=()=>{applyColumns(table,select.value);[...panel.querySelectorAll("input")].forEach((x,i)=>x.checked=!table.tHead.rows[0].cells[i].hidden)};[...table.tHead?.rows[0]?.cells||[]].forEach((h,i)=>{const label=document.createElement("label");label.innerHTML=`<input type="checkbox" checked> ${esc(cellText(h))}`;label.querySelector("input").onchange=e=>[...table.rows].forEach(r=>{if(r.cells[i])r.cells[i].hidden=!e.target.checked});panel.append(label)});const compare=tools.querySelector('[data-action="compare"]');compare.onclick=()=>{compare.classList.toggle("active");table.classList.toggle("tableCompareMode");if(!compare.classList.contains("active")){table.querySelectorAll(".compareSelected").forEach(r=>r.classList.remove("compareSelected"));updateCompare(table)}};table.addEventListener("click",e=>{if(!table.classList.contains("tableCompareMode")||e.target.closest("a,button"))return;const row=e.target.closest("tbody tr");if(!row)return;const selected=table.querySelectorAll(".compareSelected").length;if(!row.classList.contains("compareSelected")&&selected>=5)return;row.classList.toggle("compareSelected");updateCompare(table)});tools.querySelector('[data-action="export"]').onclick=()=>csvExport(table)}
-function enhanceTables(){document.querySelectorAll("table").forEach(table=>{if(!table.dataset.toolsReady){const wrap=table.closest(".tableWrap")||table.parentElement;while(wrap.previousElementSibling?.classList?.contains("tableTools"))wrap.previousElementSibling.remove()}enhanceTable(table);if(!table.dataset.presetReady){table.dataset.presetReady="1";applyColumns(table,"all");const select=table.closest(".tableWrap")?.previousElementSibling?.querySelector?.("select");if(select)select.value="all"}})}
+function enhanceTables(){document.querySelectorAll("table:not([data-comparison-table])").forEach(table=>{if(!table.dataset.toolsReady){const wrap=table.closest(".tableWrap")||table.parentElement;while(wrap.previousElementSibling?.classList?.contains("tableTools"))wrap.previousElementSibling.remove()}enhanceTable(table);if(!table.dataset.presetReady){table.dataset.presetReady="1";applyColumns(table,"all");const select=table.closest(".tableWrap")?.previousElementSibling?.querySelector?.("select");if(select)select.value="all"}})}
 wrapSettings();enhanceTables();new MutationObserver(enhanceTables).observe(document.body,{childList:true,subtree:true});
 window.WNBLCharts={
 bars(el,items){el.innerHTML=`<div class="metricBars">${items.map(x=>`<div class="metricBar"><span>${esc(x.label)}</span><div class="metricBarTrack"><div class="metricBarFill" style="width:${Math.max(2,Math.min(100,x.value))}%"></div></div><span class="metricBarValue">${esc(x.display??x.value)}</span></div>`).join("")}</div>`},
@@ -121,4 +121,34 @@ const render=isPlayer?renderPlayer:renderTeam;render();
   }
   update();
   document.addEventListener('change',e=>{if (['globalSeason','seasonSelect'].includes(e.target.id)) update();});
+})();
+
+// Carry the current player/team and season into the comparison workspace.
+(() => {
+  const file = location.pathname.split('/').pop();
+  const playerNode = document.getElementById('profile-data');
+  const teamNode = document.getElementById('team-data');
+  const mode = playerNode || file === 'player-statistics.html' ? 'players'
+    : teamNode || file === 'team-statistics.html' ? 'teams'
+    : file === 'league-statistics.html' ? 'seasons' : null;
+  const main = document.querySelector('main');
+  if (!mode || !main) return;
+  let profile;
+  try { const profiles = JSON.parse((playerNode || teamNode)?.textContent || '{}').profiles; profile = profiles?.length === 1 ? profiles[0] : null; } catch { return; }
+  const link = document.createElement('a');
+  link.className = 'comparisonShortcut';
+  link.style.cssText = 'display:block;padding:14px 4vw;font-size:14px;font-weight:700';
+  link.textContent = mode === 'seasons' ? 'Compare league seasons' : profile ? 'Compare this ' + (mode === 'players' ? 'player' : 'team') : 'Compare ' + mode;
+  main.before(link);
+  const update = () => {
+    const selected = document.querySelector('#globalSeason, #seasonSelect, #seasonFilter, #season')?.value;
+    const season = selected || profile?.season_stats.map(row => row.season).sort().at(-1);
+    const query = new URLSearchParams({mode});
+    if (profile && season) query.append('pick', profile.slug + '|' + season);
+    else if (mode === 'seasons' && season) query.append('pick', season);
+    else if (season) query.set('season', season);
+    link.href = 'compare.html?' + query;
+  };
+  update();
+  document.addEventListener('change', update);
 })();
