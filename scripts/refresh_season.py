@@ -86,6 +86,7 @@ def main():
     current = [g for g in json.loads((ROOT / "app/box-scores.json").read_text())["games"] if g["season"] == "2026-27"]
     metadata = json.loads((ROOT / "app/season-update.json").read_text())
     metadata.update(as_of=max(g["game_date"] for g in current), updated_at=datetime.now(timezone.utc).isoformat(), games=len(current), game_ids=sorted(g["game_id"] for g in current))
+    metadata["continuity_note"] = "Requires eight completed games and prior-season minutes per team; only eligible teams appear."
     metadata["source_notes"] = json.loads((ROOT / "app/current-season-source-notes.json").read_text())
     metadata["checks"] = {"official_schedule_matches":len(current), "player_plus_minus_matches":len(current), "lineup_score_and_margin_matches":len(current), "automated_tests_passed":None}
     (ROOT / "app/season-update.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n")

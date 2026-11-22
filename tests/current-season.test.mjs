@@ -42,7 +42,11 @@ test('refreshes analytical families and current team records',async()=>{
   assert.equal(data.meta.current_season_complete,false);
   for(const key of ['kills','clutch','networks','players','defensePlayers','teams'])assert.ok(data[key].some(r=>r.season===current),key);
   for(const key of ['connections','creation_dependency','dependence','runs','score_pressure','quarter_profiles','sustainability','development'])assert.ok(deep[key].some(r=>r.season===current),key);
-  assert.ok(!deep.continuity.some(r=>r.season===current),'Do not mix partial seasons into the first-eight-game model');
+  const shortClub=name=>name==='University of Canberra Capitals'?'UC Capitals':name==='Southside Melbourne Flyers'?'Southside Flyers':name.split(' ')[0];
+  const eligible=teams.profiles.filter(p=>p.season_stats.some(r=>r.season===current&&r.games>=8)&&p.players.some(r=>r.season==='2025-26'&&r.minutes_seconds>0)).map(p=>shortClub(p.dataset_name)).sort();
+  const currentContinuity=deep.continuity.filter(r=>r.season===current);
+  assert.deepEqual(currentContinuity.map(r=>r.team).sort(),eligible,'Require eight complete games and prior-season minutes for each eligible club');
+  assert.ok(currentContinuity.every(r=>r.early_games===8&&r.early_wins+r.early_losses===8));
   assert.ok(hack.meta.seasons.includes(current));
   assert.equal(rotation.team_games.filter(r=>r.season===current).length,gameCount*2);
   const currentTeams=teams.profiles.flatMap(p=>p.season_stats.filter(r=>r.season===current));

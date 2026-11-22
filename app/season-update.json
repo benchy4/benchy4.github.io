@@ -1,9 +1,9 @@
 {
   "season": "2026-27",
-  "as_of": "2026-11-17",
-  "updated_at": "2026-11-18T11:09:27.044221+00:00",
+  "as_of": "2026-11-22",
+  "updated_at": "2026-11-22T11:12:50.608983+00:00",
   "complete": false,
-  "games": 28,
+  "games": 32,
   "clubs": 9,
   "game_ids": [
     "2497244",
@@ -33,15 +33,19 @@
     "2497268",
     "2497269",
     "2497270",
-    "2497271"
+    "2497271",
+    "2497272",
+    "2497273",
+    "2497274",
+    "2497275"
   ],
   "instat_source": "https://app.hudl.com/instat/basketball/tournaments/409",
   "result_verification_source": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=200&offset=0&year=2026",
   "checks": {
-    "official_schedule_matches": 28,
-    "player_plus_minus_matches": 28,
-    "lineup_score_and_margin_matches": 28,
-    "automated_tests_passed": 38
+    "official_schedule_matches": 32,
+    "player_plus_minus_matches": 32,
+    "lineup_score_and_margin_matches": 32,
+    "automated_tests_passed": 45
   },
   "source_notes": {
     "2497248": "InStat source discrepancy: Sydney's player box score totals 93 points, including 18 for Shuyu Yang, while the final score, play-by-play and lineups record 95 (20 for Yang in the event log). Player figures are preserved as published; team results use the verified 95–68 final score.",
@@ -51,5 +55,5 @@
     "236477",
     "831081"
   ],
-  "continuity_note": "Requires eight completed games per team-season; current-season teams are not yet eligible."
+  "continuity_note": "Requires eight completed games and prior-season minutes per team; only eligible teams appear."
 }

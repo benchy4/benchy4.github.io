@@ -45,7 +45,7 @@ test("keeps decision tools as dedicated pages",async()=>{
 test("provides a standalone, searchable player statistics page",async()=>{
   const{status,body}=await fetchPage("player-statistics.html");assert.equal(status,200);
   for(const text of ["Player statistics","Box stats","Advanced","Player name","Total points created","Creation dependency"])assert.ok(body.includes(text),text);
-  const data=jsonScript(body,"player-table-data");assert.equal(data.players.length,875);assert.equal(data.seasons.length,8);assert.ok(Object.keys(data.slugs).length>=360);
+  const data=jsonScript(body,"player-table-data");assert.equal(data.players.length,876);assert.equal(data.seasons.length,8);assert.ok(Object.keys(data.slugs).length>=360);
 });
 
 test("creates all player profiles and supplies integrated creation data",async()=>{
@@ -78,8 +78,8 @@ test("retains complete team, league and box-score pages",async()=>{
 
 test("retains the validated eight-season analysis datasets",async()=>{
   const d=JSON.parse(await readFile(new URL("../app/data.json",import.meta.url),"utf8")),deep=JSON.parse(await readFile(new URL("../app/deep-dives.json",import.meta.url),"utf8"));
-  assert.deepEqual(d.meta.seasons,["2019-20","2020","2021-22","2022-23","2023-24","2024-25","2025-26","2026-27"]);assert.equal(d.meta.games,591+currentGames);assert.equal(d.meta.possessions,111081.4);assert.equal(d.meta.possession_definition,"Possessions used for PPP calculations");assert.equal(d.players.length,875);assert.equal(d.teams.length,65);
-  assert.equal(deep.dependence.length,65);assert.equal(deep.runs.length,65);assert.equal(deep.sustainability.length,65);assert.equal(deep.continuity.length,48);assert.equal(deep.continuity_bins.length,3);assert.equal(deep.continuity_sensitivity.length,3);assert.equal(deep.identity_audit.length,7);assert.ok(deep.connections.length>4000);assert.ok(deep.creation_dependency.length>800);assert.ok(deep.score_pressure.length>300);assert.ok(deep.quarter_profiles.length>200);assert.ok(deep.development.length>250);
+  assert.deepEqual(d.meta.seasons,["2019-20","2020","2021-22","2022-23","2023-24","2024-25","2025-26","2026-27"]);assert.equal(d.meta.games,591+currentGames);assert.equal(d.meta.possessions,111772.8);assert.equal(d.meta.possession_definition,"Possessions used for PPP calculations");assert.equal(d.players.length,876);assert.equal(d.teams.length,65);
+  assert.equal(deep.dependence.length,65);assert.equal(deep.runs.length,65);assert.equal(deep.sustainability.length,65);assert.equal(deep.continuity.filter(r=>r.season!=="2026-27").length,48);assert.equal(deep.continuity_bins.length,3);assert.equal(deep.continuity_sensitivity.length,3);assert.equal(deep.identity_audit.length,7);assert.ok(deep.connections.length>4000);assert.ok(deep.creation_dependency.length>800);assert.ok(deep.score_pressure.length>300);assert.ok(deep.quarter_profiles.length>200);assert.ok(deep.development.length>250);
 });
 
 test("keeps tables sortable, centred, linked and explained",async()=>{
@@ -152,7 +152,7 @@ test("formats deep dives as full analysis pages and caps displayed precision",as
 
 test("analyses roster continuity, early results and player identity changes",async()=>{
   const{status,body}=await fetchPage("roster-continuity.html");assert.equal(status,200);const data=jsonScript(body,"deep-data"),summary=data.continuity_summary;
-  assert.equal(data.meta.focus,"continuity");assert.equal(data.continuity.length,48);assert.equal(summary.early_games,384);assert.equal(summary.early_definition_games,8);assert.equal(summary.high_continuity_team_seasons,11);assert.ok(summary.high_continuity_early_win_rate>summary.lower_continuity_early_win_rate);assert.ok(summary.adjusted_win_rate_change_per_10pp>0);assert.ok(summary.adjusted_margin_change_per_10pp>0);
+  assert.equal(data.meta.focus,"continuity");assert.equal(data.continuity.filter(r=>r.season!=="2026-27").length,48);assert.equal(summary.early_games,8*data.continuity.length);assert.equal(summary.early_definition_games,8);assert.equal(summary.high_continuity_team_seasons,data.continuity.filter(r=>r.prior_minutes_retained>=summary.high_continuity_cutoff).length);assert.ok(summary.high_continuity_early_win_rate>summary.lower_continuity_early_win_rate);assert.ok(summary.adjusted_win_rate_change_per_10pp>0);assert.ok(summary.adjusted_margin_change_per_10pp>0);
   for(const text of ["Roster continuity and early results","First-eight win rate by continuity group","Sensitivity to the definition of early season"])assert.ok(body.includes(text),text);
   assert.ok(!body.includes("Player identity audit"));
   for(const mapping of [["Miela Goodchild","Miela Sowah"],["Chelsea Brooks","Chelsea Brook"],["Abby Kate Bishop","Abby Bishop"],["Isabel Borlase","Isobel Borlase"],["Kristy Anne Wallace","Kristy Wallace"],["Caitlin Martin","Caitlyn Martin"]])assert.ok(data.identity_audit.some(r=>r.source_name===mapping[0]&&r.canonical_name===mapping[1]),mapping.join(" → "));
@@ -198,7 +198,7 @@ test("shows all six same-game on-off measures and preserves lineup coverage",asy
 
 test("calculates and displays traditional and WNBL-adjusted Win Shares",async()=>{
   const winShares=JSON.parse(await readFile(new URL("../app/win-shares.json",import.meta.url),"utf8"));
-  assert.equal(winShares.meta.player_seasons,875);assert.equal(winShares.meta.team_seasons,65);assert.equal(winShares.records.length,875);
+  assert.equal(winShares.meta.player_seasons,876);assert.equal(winShares.meta.team_seasons,65);assert.equal(winShares.records.length,876);
   for(const row of winShares.records){for(const key of ["offensive_win_shares","defensive_win_shares","win_shares","win_shares_per_40","adjusted_win_shares","adjusted_win_shares_per_40"])assert.ok(Number.isFinite(row[key]),`${row.player}: ${key}`);assert.ok(Math.abs(row.win_shares-row.offensive_win_shares-row.defensive_win_shares)<1e-9,row.player)}
   assert.ok(winShares.reconciliation.every(row=>Math.abs(row.adjusted_player_win_shares-row.player_win_shares)<1e-9));
   const profiles=JSON.parse(await readFile(new URL("../app/player-profiles.json",import.meta.url),"utf8")),alicia=profiles.profiles.find(p=>p.name==="Alicia Froling").season_stats.find(r=>r.season==="2025-26"&&r.team==="Townsville");
