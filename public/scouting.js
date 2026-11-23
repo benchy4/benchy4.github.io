@@ -22,10 +22,11 @@ const row = cells => `<tr>${cells.map(c=>`<td>${c}</td>`).join('')}</tr>`;
 const empty = message => `<p class="empty" role="status">${escape(message)}</p>`;
 const teamGames = () => data.games.filter(g=>g.season === state.season && [g.home,g.away].includes(state.team));
 const matchup = g => `${dateName(g.date)} · ${data.teams[g.away]} at ${data.teams[g.home]}`;
-function scopeNote(scope) {
+function scopeNote(scope, completedCount) {
   const ids = new Set(scope.games);
   const games = teamGames().filter(g=>ids.has(g.id)).sort((a,b)=>a.date.localeCompare(b.date));
-  return `<p class="scope-note">${games.length} games · ${dateName(games[0].date)} – ${dateName(games.at(-1).date)}. Fixed InStat sample.</p>
+  const count = completedCount == null ? games.length + ' games' : games.length + ' of ' + completedCount + ' completed games in the clip sample';
+  return `<p class="scope-note">${count} · ${dateName(games[0].date)} – ${dateName(games.at(-1).date)}. Fixed InStat sample.</p>
     <details class="scope-list"><summary>Games in this sample</summary><ul>${games.map(g=>`<li>${g.box ? `<a href="box-score-${escape(g.box)}.html">${escape(matchup(g))}</a>` : escape(matchup(g))}</li>`).join('')}</ul></details>`;
 }
 async function readJson(name) {
@@ -128,25 +129,43 @@ function efficiencyPanel(label, groups) {
   return `<section class="stats-panel"><h3>${escape(label)}</h3>${table(['Coverage','PPP','Poss','Pts','<abbr title="Turnovers">TO</abbr>'],rows)}</section>`;
 }
 
-function coverageEfficiency(records) {
-  const reviewed = teamGames().filter(g => Object.hasOwn(records, g.id)).sort((a,b) => a.date.localeCompare(b.date));
-  const tagged = reviewed.filter(g => records[g.id] != null);
-  if (!reviewed.length) return empty('No possession outcomes have been published for this team and season.');
-  const list = reviewed.map(g => `<li><a href="box-score-${escape(g.box)}.html">${escape(matchup(g))}</a> · ${records[g.id] ? 'Included' : 'No play-type tags'}</li>`).join('');
-  const sample = `<p class="scope-note">${tagged.length} of ${reviewed.length} reviewed Hudl ${reviewed.length===1?'game':'games'} with ball-screen tags · ${dateName(reviewed[0].date)} – ${dateName(reviewed.at(-1).date)}.</p>
-    <details class="scope-list"><summary>Games reviewed for efficiency</summary><ul>${list}</ul></details>`;
-  if (!tagged.length) return sample + empty('These games have no tagged ball-screen possessions.');
+function coverageStatus(game) {
+  if (game.scoreMismatch) return `Excluded · export score ${game.exportScore.join('–')}, official score ${game.boxScore.join('–')} (home first)`;
+  if (!Object.hasOwn(game, 'stats')) return 'PnR data not yet imported';
+  if (!game.stats) return 'No ball-screen tags in export';
+  if (game.taggedPeriods) return 'Included · play-type tags in ' + game.taggedPeriods.map(periodName).join(', ') + ' only';
+  return 'Included';
+}
+
+function coverageEfficiency(games) {
+  if (!games.length) return empty('No completed games are listed for this team and season.');
   const name = data.teams[state.team];
-  const offence = tagged.map(g => records[g.id][state.team]);
-  const defence = tagged.map(g => records[g.id][g.home===state.team ? g.away : g.home]);
+  const tagged = games.filter(g => g.stats);
+  const partial = tagged.filter(g => g.taggedPeriods).length;
+  const list = games.map(g => {
+    const label = dateName(g.date) + ' · ' + (g.home===state.team ? 'vs ' + data.teams[g.away] : 'at ' + data.teams[g.home]);
+    return `<li><a href="box-score-${escape(g.box)}.html">${escape(label)}</a> · ${escape(coverageStatus(g))}</li>`;
+  }).join('');
+  const sample = `<p><strong>${tagged.length} of ${games.length} completed games</strong> included in PnR efficiency.${partial ? ' Partial tagging in ' + partial + (partial===1?' game.':' games.') : ''}</p>
+    <details class="scope-list"${games.length<=10?' open':''}><summary>Coverage status for each game</summary><ul>${list}</ul></details>`;
+  if (!tagged.length) return sample + empty('No possession outcomes have been published for this team and season.');
+  const selected = state.game ? games.find(g => g.box===state.game) : null;
+  const filter = '<div class="filters">' + options('game','Game for efficiency',
+    [['','All completed games'], ...games.map(g => [g.box,matchup(g)])], state.game || '') + '</div>';
+  const heading = sample + filter;
+  if (state.game && !selected) return heading + empty('This game is outside the selected team and season.');
+  if (selected && !selected.stats) return heading + empty(coverageStatus(selected));
+  const included = selected ? [selected] : tagged;
+  const offence = included.map(g => g.stats[state.team]);
+  const defence = included.map(g => g.stats[g.home===state.team ? g.away : g.home]);
   const untagged = [...offence, ...defence].flatMap(group => group.Untagged ?? []);
   const untaggedCount = untagged.reduce((sum, stats) => sum + stats.possessions, 0);
   const untaggedTurnovers = untagged.reduce((sum, stats) => sum + stats.turnovers, 0);
   const missing = untaggedCount ? ` Across both sides of the ball, ${untaggedTurnovers} of ${untaggedCount} untagged possessions ended in turnovers. These count towards All PnR.` : '';
-  return sample + '<p>PPP is points per possession. Each tagged ball-screen possession counts once, including linked free throws and points after offensive rebounds.</p>' +
+  return heading + '<p>PPP is points per possession. Each tagged ball-screen possession counts once, including linked free throws and points after offensive rebounds.</p>' +
     '<div class="details-grid">' + efficiencyPanel(name + ' scoring against coverage', offence) +
     efficiencyPanel(name + ' points allowed by coverage', defence) + '</div>' +
-    '<p class="scope-note">Over and Under describe the on-ball defender’s route. ICE / Drop has both tags. Possessions with different coverages appear under Multiple coverages. Untagged means a ball screen was recorded without a coverage call.' + missing + '</p>';
+    '<p class="scope-note">Over and Under describe the on-ball defender’s route. ICE / Drop has both tags. Possessions with different named coverages appear under Multiple coverages. Untagged means no ball screen on that possession had a coverage call.' + missing + '</p>';
 }
 
 async function renderCoverage() {
@@ -158,17 +177,20 @@ async function renderCoverage() {
     });
     return `<section class="stats-panel"><h3>${label}</h3><p>${group.total} tagged clips</p>${table(['Coverage','Clips','Share'],rows)}</section>`;
   }
-  const frequency = scope ? scopeNote(scope) + '<div class="details-grid">' +
-    coverageTable('Faced on offence',scope.offence) + coverageTable('Used on defence',scope.defence) +
-    '</div><p class="scope-note">Share is the percentage of InStat clips on that side of the ball. The clip snapshot has its own game sample.</p>' :
-    empty('No pick-and-roll clip counts have been published for this team and season.');
+  let games;
   let efficiency;
   try {
-    efficiencyRequest ??= readJson('pnr-efficiency').catch(error => { efficiencyRequest = null; throw error; });
-    efficiency = coverageEfficiency(await efficiencyRequest);
+    efficiencyRequest ??= readJson('coverage-games').catch(error => { efficiencyRequest = null; throw error; });
+    const calendar = await efficiencyRequest;
+    games = calendar.filter(g => g.season===state.season && [g.home,g.away].includes(state.team));
+    efficiency = coverageEfficiency(games);
   } catch {
     efficiency = empty('Possession outcomes could not load.') + '<button type="button" id="retry">Try again</button>';
   }
+  const frequency = scope ? scopeNote(scope, games?.length) + '<div class="details-grid">' +
+    coverageTable('Faced on offence',scope.offence) + coverageTable('Used on defence',scope.defence) +
+    '</div><p class="scope-note">Share is the percentage of InStat clips on that side of the ball. The clip snapshot has its own game sample.</p>' :
+    empty('No pick-and-roll clip counts have been published for this team and season.');
   return '<h2>Pick-and-roll efficiency</h2>' + efficiency + '<h2>Coverage frequency</h2>' + frequency;
 }
 

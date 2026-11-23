@@ -214,6 +214,22 @@ for (const asset of ["scouting.html", "scouting.css", "scouting.js"]) {
 for (const file of await readdir(resolve(root, "app/scouting"))) {
   await emit("scouting-data/" + file, await readFile(resolve(root, "app/scouting", file)));
 }
+// Use completed box scores as the schedule, including games missing from the shot feed.
+const pnrOutcomes = JSON.parse(await readFile(resolve(root, "app/scouting/pnr-efficiency.json"), "utf8"));
+const pnrNotes = JSON.parse(await readFile(resolve(root, "app/pnr-review.json"), "utf8"));
+const teamCodes = new Map(Object.entries(scoutingIndex.teams).map(([code, name]) => [name, code]));
+teamCodes.set("University of Canberra Capitals", "UCC");
+const feedIds = new Map(scoutingIndex.games.filter(g => g.box).map(g => [g.box, g.id]));
+const coverageGames = boxData.games.filter(g => scoutingSeasons.shots.includes(g.season)).map(g => {
+  const box = String(g.game_id), home = teamCodes.get(g.team_1), away = teamCodes.get(g.team_2);
+  if (!home || !away) throw new Error("Unknown scouting team in game " + box);
+  const id = feedIds.get(box);
+  const key = Object.hasOwn(pnrOutcomes, box) ? box : id;
+  const record = {season:g.season, date:g.game_date, box, home, away, ...pnrNotes[box]};
+  if (Object.hasOwn(pnrOutcomes, key)) record.stats = pnrOutcomes[key];
+  return record;
+}).sort((a,b) => a.date.localeCompare(b.date) || a.box.localeCompare(b.box));
+await emit("scouting-data/coverage-games.json", JSON.stringify(coverageGames));
 await emit("visual-refresh-demo.html",await readFile(resolve(root,"static/visual-refresh-demo.html"),"utf8"));
 await emit("fire-logo.png",await readFile(resolve(root,"static/fire-logo.png")));
 await emit("fire-mark.png",await readFile(resolve(root,"static/fire-mark.png")));

@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 
 const load = async file => JSON.parse(await readFile(new URL('../app/scouting/' + file + '.json', import.meta.url)));
 const index = await load('index');
+const coverageGames = JSON.parse(await readFile(new URL('../scouting-data/coverage-games.json', import.meta.url)));
 
 test('mapped games, audited attempts and local box-score links agree', async () => {
   for (const season of new Set(index.games.map(g=>g.season))) {
@@ -49,7 +50,7 @@ test('clip counts and each player split retain their own game scope and denomina
 test('PnR efficiency uses full possessions and keeps unclassified turnovers in the sample', async () => {
   const records = await load('pnr-efficiency');
   for (const [id, teams] of Object.entries(records)) {
-    const game = index.games.find(g => g.id === id);
+    const game = index.games.find(g => g.id === id) || coverageGames.find(g => g.box === id);
     assert.ok(game?.box);
     if (teams === null) continue;
     assert.deepEqual(new Set(Object.keys(teams)), new Set([game.home, game.away]));
@@ -67,4 +68,22 @@ test('PnR efficiency uses full possessions and keeps unclassified turnovers in t
   assert.deepEqual(fireFlames.SYD['Multiple coverages'], {points:2, possessions:1, turnovers:0});
   const total = Object.values(fireFlames).flatMap(Object.values).reduce((n, s) => n + s.possessions, 0);
   assert.equal(total, 50);
+});
+
+test('every completed scouting-season fixture appears even when its PnR export is unavailable', async () => {
+  const boxes = JSON.parse(await readFile(new URL('../app/box-scores.json', import.meta.url))).games;
+  const seasons = new Set(index.games.map(g => g.season));
+  const expected = boxes.filter(g => seasons.has(g.season)).map(g => String(g.game_id)).sort();
+  assert.deepEqual(coverageGames.map(g => g.box).sort(), expected);
+  const through = coverageGames.filter(g => g.season==='2026-27' && g.date<='2026-11-22');
+  for (const code of ['TAS','UCC']) {
+    const games = through.filter(g => [g.home, g.away].includes(code));
+    assert.equal(games.length, 6);
+    assert.ok(games.every(g => Object.hasOwn(g, 'stats')));
+    assert.ok(games.find(g => g.box==='2497274').stats[code]);
+  }
+  assert.deepEqual(through.find(g => g.box==='2497268').taggedPeriods, [1]);
+  const discrepancy = through.find(g => g.box==='2497264');
+  assert.ok(discrepancy.scoreMismatch);
+  assert.equal(discrepancy.stats, null);
 });
