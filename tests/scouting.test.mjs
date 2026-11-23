@@ -45,3 +45,26 @@ test('clip counts and each player split retain their own game scope and denomina
     }
   }
 });
+
+test('PnR efficiency uses full possessions and keeps unclassified turnovers in the sample', async () => {
+  const records = await load('pnr-efficiency');
+  for (const [id, teams] of Object.entries(records)) {
+    const game = index.games.find(g => g.id === id);
+    assert.ok(game?.box);
+    if (teams === null) continue;
+    assert.deepEqual(new Set(Object.keys(teams)), new Set([game.home, game.away]));
+    for (const group of Object.values(teams)) {
+      for (const {possessions, points, turnovers} of Object.values(group)) {
+        assert.ok(Number.isInteger(possessions) && possessions > 0);
+        assert.ok(Number.isInteger(points) && points >= 0);
+        assert.ok(Number.isInteger(turnovers) && turnovers >= 0 && turnovers <= possessions);
+      }
+    }
+  }
+  const fireFlames = records[index.games.find(g => g.box === '2497254').id];
+  assert.deepEqual(fireFlames.TSV.Over, {points:31, possessions:20, turnovers:0});
+  assert.deepEqual(fireFlames.TSV.Untagged, {points:0, possessions:7, turnovers:7});
+  assert.deepEqual(fireFlames.SYD['Multiple coverages'], {points:2, possessions:1, turnovers:0});
+  const total = Object.values(fireFlames).flatMap(Object.values).reduce((n, s) => n + s.possessions, 0);
+  assert.equal(total, 50);
+});
