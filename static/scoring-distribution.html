@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scoring distribution — WNBL Data</title>
+  <meta name="description" content="Explore how WNBL teams share their scoring across players and games. Compare top-five scoring shares and game-by-game box scores.">
+  <link rel="stylesheet" href="scoring-distribution.css">
+</head>
+<body>
+<main class="sd-page">
+  <header class="sd-title">
+    <a href="analysis-hub.html">Deep Dives</a>
+    <h1>Scoring distribution</h1>
+    <p>See who carries the scoring, how the top five divide their points and how often five players reach double figures.</p>
+  </header>
+  <div class="sd-controls" aria-label="Scoring filters">
+    <label>Team<select id="sd-team"></select></label>
+    <label>Game range<select id="sd-range">
+      <option value="all">All games</option><option value="first6">First 6 games</option>
+      <option value="last2">Last 2 games</option><option value="custom">Custom range</option>
+    </select></label>
+    <div id="sd-custom" hidden><label>From game<select id="sd-from"></select></label><label>Through game<select id="sd-to"></select></label></div>
+    <p id="sd-scope" role="status"></p>
+  </div>
+  <noscript><p>Enable JavaScript to explore scoring by team and game range.</p></noscript>
+  <div id="sd-report" hidden>
+    <section class="sd-lead" aria-labelledby="sd-team-title">
+      <header><h2 id="sd-team-title"></h2><p id="sd-period"></p></header>
+      <div id="sd-metrics" class="sd-metrics"></div>
+    </section>
+    <section class="sd-card" aria-labelledby="sd-split-title">
+      <h2 id="sd-split-title">How the nightly five split their points</h2>
+      <p>Rank each game’s scorers from first to fifth. Each bar divides those five players’ combined points.</p>
+      <div id="sd-bars"></div>
+      <div class="sd-scroll"><table class="sd-ranks"><caption class="sd-sr">Scoring by nightly rank for the team and league</caption><thead><tr>
+        <th scope="col">Scorer</th><th scope="col">Share of five</th><th scope="col">League share</th><th scope="col">Points per game</th>
+      </tr></thead><tbody id="sd-ranks"></tbody></table></div>
+    </section>
+    <section class="sd-card" aria-labelledby="sd-league-title">
+      <h2 id="sd-league-title">League comparison</h2>
+      <p>Each team uses the selected game range from its own schedule. Select a team to see its breakdown.</p>
+      <div class="sd-scroll"><table><caption class="sd-sr">Teams ordered by nightly top-five share</caption><thead><tr>
+        <th scope="col">Team</th><th scope="col">Games</th><th scope="col">Nightly top 3</th><th scope="col">Fixed top 3</th><th scope="col">Nightly top 5</th>
+        <th scope="col">Fixed top 5</th><th scope="col">Other scorers PPG</th><th scope="col">Games with 5 at 10+</th>
+      </tr></thead><tbody id="sd-league"></tbody></table></div>
+    </section>
+    <section class="sd-card" aria-labelledby="sd-results-title">
+      <h2 id="sd-results-title">Scoring depth and winning</h2><p id="sd-result-scope"></p>
+      <div class="sd-scroll"><table><caption class="sd-sr">League results by scoring depth</caption><thead><tr>
+        <th scope="col">Team condition</th><th scope="col">Wins</th><th scope="col">Losses</th><th scope="col">Win rate</th>
+      </tr></thead><tbody id="sd-results"></tbody></table></div>
+    </section>
+    <section class="sd-card" aria-labelledby="sd-players-title">
+      <h2 id="sd-players-title">Player scoring shares</h2>
+      <p>Players ranked by total points over this stretch. “Share of five” uses the combined points of the five leading players.</p>
+      <div class="sd-scroll"><table><caption class="sd-sr">Player scoring for this team and game range</caption><thead><tr>
+        <th scope="col">Player</th><th scope="col">Games played</th><th scope="col">Points</th><th scope="col">PPG</th>
+        <th scope="col">Share of team</th><th scope="col">Share of five</th>
+      </tr></thead><tbody id="sd-players"></tbody></table></div>
+    </section>
+    <section class="sd-card" aria-labelledby="sd-games-title">
+      <h2 id="sd-games-title">Game log</h2><p>Open an opponent to see the original box score. Ranked columns show points scored.</p>
+      <div class="sd-scroll"><table><caption class="sd-sr">Individual games and ranked scorer points</caption><thead><tr>
+        <th scope="col">Game</th><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Result</th>
+        <th scope="col">1st</th><th scope="col">2nd</th><th scope="col">3rd</th><th scope="col">4th</th><th scope="col">5th</th>
+        <th scope="col">Top 5 share</th><th scope="col">10+ scorers</th>
+      </tr></thead><tbody id="sd-games"></tbody></table></div>
+    </section>
+    <details class="sd-method"><summary>Definitions and source notes</summary>
+      <p><b>Nightly shares</b> rank players anew in each game and give each game equal weight. The league benchmark gives each selected team-game equal weight. The fixed top five are the same five players ranked by their total points over the selected stretch.</p>
+      <p><b>Availability and ties.</b> PPG uses games played. A scoring tie leaves the nightly shares unchanged. Players tied on total points are listed alphabetically.</p>
+      <p><b>Source.</b> InStat player box scores. Two 2026–27 Sydney player totals use the documented event logs to reconcile to the final score. <a href="box-score-2497248.html">Sydney–Adelaide, 18 October</a> · <a href="box-score-2497264.html">Sydney–Southside, 8 November</a>.</p>
+    </details>
+  </div>
+</main>
+<script id="distribution-data" type="application/json">/*__SCORING_DATA__*/</script>
+<script type="module" src="scoring-distribution.js"></script>
+</body>
+</html>
