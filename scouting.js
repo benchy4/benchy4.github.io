@@ -10,7 +10,7 @@ const views = ['shots','coverage','impact'];
 const params = new URLSearchParams(location.search);
 const state = Object.fromEntries(params);
 const shotCache = new Map();
-let data, revision = 0;
+let data, efficiencyRequest, revision = 0;
 
 function options(id, label, items, value) {
   return `<label>${label}<select id="${id}">${items.map(([k,v]) => `<option value="${escape(k)}"${String(k) === String(value) ? ' selected' : ''}>${escape(v)}</option>`).join('')}</select></label>`;
@@ -96,9 +96,61 @@ async function renderShots(version) {
   return result;
 }
 
-function renderCoverage() {
+const coverageOrder = ['Over','Under','Switch','Double (trap)','Hedge','ICE / Drop'];
+
+function efficiencyPanel(label, groups) {
+  const byCoverage = new Map();
+  let possessions = 0, points = 0, turnovers = 0;
+  for (const group of groups) {
+    for (const [name, stats] of Object.entries(group)) {
+      const totals = byCoverage.get(name) || {possessions:0, points:0, turnovers:0};
+      totals.possessions += stats.possessions;
+      totals.points += stats.points;
+      totals.turnovers += stats.turnovers;
+      byCoverage.set(name, totals);
+      possessions += stats.possessions;
+      points += stats.points;
+      turnovers += stats.turnovers;
+    }
+  }
+  const other = [...byCoverage.keys()].filter(name => !coverageOrder.includes(name) && name!=='Untagged').sort();
+  const names = [...coverageOrder, ...other];
+  if (byCoverage.has('Untagged')) names.push('Untagged');
+  const cells = (name, n, pts, lost) => [
+    escape(name), n ? '<strong>' + (pts / n).toFixed(2) + '</strong>' : '—', n, n ? pts : '—', n ? lost : '—'
+  ];
+  const rows = names.map(name => {
+    const stats = byCoverage.get(name);
+    return row(cells(name, stats?.possessions ?? 0, stats?.points ?? 0, stats?.turnovers ?? 0));
+  });
+  const total = cells('All PnR', possessions, points, turnovers);
+  rows.push(`<tr class="chosen"><th scope="row">${total[0]}</th>${total.slice(1).map(v => `<td>${v}</td>`).join('')}</tr>`);
+  return `<section class="stats-panel"><h3>${escape(label)}</h3>${table(['Coverage','PPP','Poss','Pts','<abbr title="Turnovers">TO</abbr>'],rows)}</section>`;
+}
+
+function coverageEfficiency(records) {
+  const reviewed = teamGames().filter(g => Object.hasOwn(records, g.id)).sort((a,b) => a.date.localeCompare(b.date));
+  const tagged = reviewed.filter(g => records[g.id] != null);
+  if (!reviewed.length) return empty('No possession outcomes have been published for this team and season.');
+  const list = reviewed.map(g => `<li><a href="box-score-${escape(g.box)}.html">${escape(matchup(g))}</a> · ${records[g.id] ? 'Included' : 'No play-type tags'}</li>`).join('');
+  const sample = `<p class="scope-note">${tagged.length} of ${reviewed.length} reviewed Hudl ${reviewed.length===1?'game':'games'} with ball-screen tags · ${dateName(reviewed[0].date)} – ${dateName(reviewed.at(-1).date)}.</p>
+    <details class="scope-list"><summary>Games reviewed for efficiency</summary><ul>${list}</ul></details>`;
+  if (!tagged.length) return sample + empty('These games have no tagged ball-screen possessions.');
+  const name = data.teams[state.team];
+  const offence = tagged.map(g => records[g.id][state.team]);
+  const defence = tagged.map(g => records[g.id][g.home===state.team ? g.away : g.home]);
+  const untagged = [...offence, ...defence].flatMap(group => group.Untagged ?? []);
+  const untaggedCount = untagged.reduce((sum, stats) => sum + stats.possessions, 0);
+  const untaggedTurnovers = untagged.reduce((sum, stats) => sum + stats.turnovers, 0);
+  const missing = untaggedCount ? ` Across both sides of the ball, ${untaggedTurnovers} of ${untaggedCount} untagged possessions ended in turnovers. These count towards All PnR.` : '';
+  return sample + '<p>PPP is points per possession. Each tagged ball-screen possession counts once, including linked free throws and points after offensive rebounds.</p>' +
+    '<div class="details-grid">' + efficiencyPanel(name + ' scoring against coverage', offence) +
+    efficiencyPanel(name + ' points allowed by coverage', defence) + '</div>' +
+    '<p class="scope-note">Over and Under describe the on-ball defender’s route. ICE / Drop has both tags. Possessions with different coverages appear under Multiple coverages. Untagged means a ball screen was recorded without a coverage call.' + missing + '</p>';
+}
+
+async function renderCoverage() {
   const scope = data.coverage[state.season]?.[state.team];
-  if (!scope) return '<h2>Pick-and-roll coverage</h2>' + empty('No pick-and-roll clip counts have been published for this team and season.');
   function coverageTable(label, group) {
     const rows = Object.entries(group.counts).map(([name,count])=>{
       const share = rate(count,group.total);
@@ -106,9 +158,18 @@ function renderCoverage() {
     });
     return `<section class="stats-panel"><h3>${label}</h3><p>${group.total} tagged clips</p>${table(['Coverage','Clips','Share'],rows)}</section>`;
   }
-  return '<h2>Pick-and-roll coverage</h2>' + scopeNote(scope) + '<div class="details-grid">' +
+  const frequency = scope ? scopeNote(scope) + '<div class="details-grid">' +
     coverageTable('Faced on offence',scope.offence) + coverageTable('Used on defence',scope.defence) +
-    '</div><p class="scope-note">A clip is one tagged pick-and-roll. Share uses the clip total for that side. These tags describe the coverage played. Scoring outcomes per coverage are unavailable.</p>';
+    '</div><p class="scope-note">Share is the percentage of InStat clips on that side of the ball. The clip snapshot has its own game sample.</p>' :
+    empty('No pick-and-roll clip counts have been published for this team and season.');
+  let efficiency;
+  try {
+    efficiencyRequest ??= readJson('pnr-efficiency').catch(error => { efficiencyRequest = null; throw error; });
+    efficiency = coverageEfficiency(await efficiencyRequest);
+  } catch {
+    efficiency = empty('Possession outcomes could not load.') + '<button type="button" id="retry">Try again</button>';
+  }
+  return '<h2>Pick-and-roll efficiency</h2>' + efficiency + '<h2>Coverage frequency</h2>' + frequency;
 }
 
 function ratings(split) {
@@ -177,7 +238,7 @@ async function render() {
   }
   syncUrl();
   try {
-    const content = state.view==='shots' ? await renderShots(version) : state.view==='coverage' ? renderCoverage() : renderImpact();
+    const content = state.view==='shots' ? await renderShots(version) : state.view==='coverage' ? await renderCoverage() : renderImpact();
     if (revision===version) $('analysis').innerHTML = content;
   } catch {
     if (revision===version) $('analysis').innerHTML = empty('The scouting data could not load.') + '<button id="retry">Try again</button>';

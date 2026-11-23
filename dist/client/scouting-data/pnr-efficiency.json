@@ -1,0 +1,625 @@
+{
+  "69ae8846-7351-11f1-a3ab-45abfc40cea9": {
+    "GEE": {
+      "Hedge": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Multiple coverages": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 9,
+        "possessions": 9,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 6,
+        "possessions": 7,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 15,
+        "possessions": 6,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 5,
+        "turnovers": 5
+      }
+    },
+    "TAS": {
+      "Double (trap)": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Hedge": {
+        "points": 2,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 15,
+        "possessions": 10,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 7,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 5,
+        "turnovers": 5
+      }
+    }
+  },
+  "69b992d1-7351-11f1-be5e-4906b15ebe56": null,
+  "69badede-7351-11f1-9409-ab9bb49b7906": {
+    "PER": {
+      "Hedge": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 18,
+        "possessions": 17,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 13,
+        "possessions": 11,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 2,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 3,
+        "turnovers": 3
+      }
+    },
+    "TSV": {
+      "Hedge": {
+        "points": 6,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 16,
+        "possessions": 11,
+        "turnovers": 1
+      },
+      "Switch": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 1
+      }
+    }
+  },
+  "69ce1464-7351-11f1-8fd3-837d8bbd023a": {
+    "ADL": {
+      "Over": {
+        "points": 11,
+        "possessions": 10,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 4,
+        "possessions": 4,
+        "turnovers": 1
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 1
+      }
+    },
+    "TSV": {
+      "Over": {
+        "points": 24,
+        "possessions": 18,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 6,
+        "possessions": 7,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 4,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 4,
+        "turnovers": 4
+      }
+    }
+  },
+  "69d62580-7351-11f1-b0f5-e9eb9c7529dc": {
+    "ADL": {
+      "Double (trap)": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Hedge": {
+        "points": 4,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 4,
+        "possessions": 5,
+        "turnovers": 1
+      },
+      "Switch": {
+        "points": 3,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 6,
+        "turnovers": 6
+      }
+    },
+    "PER": {
+      "Hedge": {
+        "points": 1,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 11,
+        "possessions": 9,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 11,
+        "possessions": 9,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 2,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 6,
+        "turnovers": 6
+      }
+    }
+  },
+  "69d907b5-7351-11f1-aae8-35eafe1ad2e9": {
+    "SYD": {
+      "Double (trap)": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Multiple coverages": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 9,
+        "possessions": 10,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 7,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 3,
+        "turnovers": 3
+      }
+    },
+    "TSV": {
+      "Hedge": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 31,
+        "possessions": 20,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 8,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 7,
+        "turnovers": 7
+      }
+    }
+  },
+  "69dafb66-7351-11f1-93fe-5dad69d5f080": null,
+  "69dc1cce-7351-11f1-81cf-63a7ee8f653a": {
+    "BEN": {
+      "ICE / Drop": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 17,
+        "possessions": 11,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 7,
+        "possessions": 5,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 2,
+        "turnovers": 2
+      }
+    },
+    "UCC": {
+      "Hedge": {
+        "points": 2,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Multiple coverages": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 7,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 8,
+        "possessions": 5,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 8,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 3,
+        "turnovers": 3
+      }
+    }
+  },
+  "69dc2c13-7351-11f1-bba0-8f641f68fc78": {
+    "GEE": {
+      "Double (trap)": {
+        "points": 5,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Hedge": {
+        "points": 3,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 8,
+        "possessions": 7,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 4,
+        "possessions": 8,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 9,
+        "possessions": 5,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 4,
+        "turnovers": 4
+      }
+    },
+    "UCC": {
+      "Double (trap)": {
+        "points": 5,
+        "possessions": 4,
+        "turnovers": 2
+      },
+      "Hedge": {
+        "points": 0,
+        "possessions": 6,
+        "turnovers": 0
+      },
+      "Multiple coverages": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 2,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 2,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 2,
+        "turnovers": 2
+      }
+    }
+  },
+  "69dd6fcd-7351-11f1-9ae5-a3102ec25c13": {
+    "ADL": {
+      "Hedge": {
+        "points": 3,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 9,
+        "possessions": 8,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 2,
+        "possessions": 3,
+        "turnovers": 1
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 2,
+        "turnovers": 2
+      }
+    },
+    "SMF": {
+      "Double (trap)": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 10,
+        "possessions": 9,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 0,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 2,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 6,
+        "turnovers": 6
+      }
+    }
+  },
+  "69e18c87-7351-11f1-b6f0-8d74e8c1d09b": {
+    "BEN": {
+      "Over": {
+        "points": 16,
+        "possessions": 12,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 11,
+        "possessions": 9,
+        "turnovers": 1
+      },
+      "Under": {
+        "points": 3,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 6,
+        "turnovers": 6
+      }
+    },
+    "TSV": {
+      "Hedge": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 23,
+        "possessions": 12,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 5,
+        "possessions": 5,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 3,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 4,
+        "turnovers": 4
+      }
+    }
+  },
+  "69e3facf-7351-11f1-9278-8d203df17987": null,
+  "69e742bd-7351-11f1-84e8-f3d1d52d40e3": null,
+  "69eb20e4-7351-11f1-b7fa-e3861d03ba50": {
+    "GEE": {
+      "Over": {
+        "points": 13,
+        "possessions": 17,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 2,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 6,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 1
+      }
+    },
+    "TSV": {
+      "Hedge": {
+        "points": 6,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 16,
+        "possessions": 13,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 5,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 8,
+        "turnovers": 8
+      }
+    }
+  },
+  "69f4e88e-7351-11f1-943d-edfe2fdc2e03": null,
+  "69f4f853-7351-11f1-949c-bbe6f2ed7c06": {
+    "SMF": {
+      "ICE / Drop": {
+        "points": 2,
+        "possessions": 2,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 22,
+        "possessions": 15,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 6,
+        "possessions": 6,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 1,
+        "turnovers": 1
+      }
+    },
+    "TAS": {
+      "Double (trap)": {
+        "points": 2,
+        "possessions": 2,
+        "turnovers": 1
+      },
+      "Hedge": {
+        "points": 3,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "ICE / Drop": {
+        "points": 3,
+        "possessions": 1,
+        "turnovers": 0
+      },
+      "Over": {
+        "points": 7,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Switch": {
+        "points": 6,
+        "possessions": 4,
+        "turnovers": 0
+      },
+      "Under": {
+        "points": 0,
+        "possessions": 3,
+        "turnovers": 0
+      },
+      "Untagged": {
+        "points": 0,
+        "possessions": 3,
+        "turnovers": 3
+      }
+    }
+  },
+  "6a023032-7351-11f1-8a16-579d3219466f": null,
+  "6a0349e0-7351-11f1-b3a4-11a5cc8928e3": null
+}
