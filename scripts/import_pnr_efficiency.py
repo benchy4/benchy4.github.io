@@ -26,9 +26,10 @@ def coverage(labels):
     return next(iter(tags), "Untagged").replace("Trap", "Double (trap)")
 
 
-def outcomes(xml, game):
+def outcomes(xml, game, expected):
     live = []
     scores = Counter()
+    periods, tagged_periods = set(), set()
     previous = None
     records = ET.fromstring(xml).findall("./ALL_INSTANCES/instance[code='Full Game']")
     for event in sorted(records, key=lambda e: float(e.findtext("start"))):
@@ -37,6 +38,9 @@ def outcomes(xml, game):
             labels[label.findtext("group")].append(label.findtext("text"))
         team, = labels["Offensive Team"]
         period, = labels["Period"]
+        periods.add(int(period))
+        if labels["Play Type"]:
+            tagged_periods.add(int(period))
         points = made_points(labels)
         scores[team] += points
         if "Free Throw" in labels["Shot Characteristics"]:
@@ -50,9 +54,11 @@ def outcomes(xml, game):
         previous = {"key": (team, period), "labels": labels, "points": points, "last_ft_made": False}
         live.append(previous)
 
-    expected = {game["team_a"]: game["score_a"], game["team_b"]: game["score_b"]}
+    if set(scores) != set(expected):
+        raise ValueError(f"Teams in XML do not match the fixture: {list(scores)}")
     if dict(scores) != expected:
-        raise ValueError(f"Final score mismatch: {scores} vs {expected}")
+        return None, {"scoreMismatch": True, "exportScore": [scores[t] for t in expected],
+                      "boxScore": list(expected.values())}
 
     chains = []
     ended = True
@@ -70,6 +76,8 @@ def outcomes(xml, game):
         coverages = {coverage(e["labels"]) for e in chain if "Ball Screen" in e["labels"]["Play Type"]}
         if not coverages:
             continue
+        if len(coverages) > 1:
+            coverages.discard("Untagged")
         category = coverages.pop() if len(coverages) == 1 else "Multiple coverages"
         team = chain[0]["key"][0]
         total = by_team[team].setdefault(category, {"possessions": 0, "points": 0, "turnovers": 0})
@@ -77,29 +85,44 @@ def outcomes(xml, game):
         total["points"] += sum(e["points"] for e in chain)
         total["turnovers"] += int(any("Turnover" in e["labels"]["Result"] for e in chain))
         count += 1
-    if count != (game["pnr_possessions"] or 0):
+    if "pnr_possessions" in game and count != (game["pnr_possessions"] or 0):
         raise ValueError(f"Expected {game['pnr_possessions']} tagged possessions, found {count}")
-    return None if game["pnr_possessions"] is None else by_team
+    note = {"taggedPeriods": sorted(tagged_periods)} if tagged_periods < periods and tagged_periods else {}
+    return (by_team if count else None), note
 
 
 def main(folder):
     manifest = json.loads((folder / "source_manifest.json").read_text())
     index = json.loads((DATA / "index.json").read_text())
-    by_box = {g["box"]: g for g in index["games"] if g.get("box")}
+    boxes = json.loads((DATA.parent / "box-scores.json").read_text())["games"]
+    by_box = {str(g["game_id"]): g for g in boxes}
+    official_ids = {g["box"]: g["id"] for g in index["games"] if g.get("box")}
     codes = {name: code for code, name in index["teams"].items()}
     target = DATA / "pnr-efficiency.json"
+    notes_path = DATA.parent / "pnr-review.json"
     updated = json.loads(target.read_text()) if target.exists() else {}
+    notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
     for game in manifest["games"]:
         xml = (folder / game["source_xml"]).read_bytes()
         if hashlib.sha256(xml).hexdigest() != game["sha256"]:
             raise ValueError(f"Source checksum mismatch for {game['game']}")
         box = game["match_url"].rstrip("/").split("/")[-1]
         fixture = by_box[box]
-        teams = {name: codes[ALIASES.get(name, name)] for name in (game["team_a"], game["team_b"])}
-        if set(teams.values()) != {fixture["home"], fixture["away"]} or fixture["date"] != game["date"]:
+        names = {ALIASES.get(n, n): n for n in (game["team_a"], game["team_b"])}
+        box_names = [ALIASES.get(fixture[k], fixture[k]) for k in ("team_1", "team_2")]
+        if set(names) != set(box_names) or fixture["game_date"] != game["date"]:
             raise ValueError(f"Fixture mismatch for {game['game']}")
-        stats = outcomes(xml, game)
-        updated[fixture["id"]] = None if stats is None else {teams[t]: group for t, group in stats.items()}
+        expected = {names[name]: fixture["score_" + str(i)] for i, name in enumerate(box_names, 1)}
+        stats, note = outcomes(xml, game, expected)
+        key = official_ids.get(box, box)
+        if key != box:
+            updated.pop(box, None)
+        updated[key] = None if stats is None else {codes[ALIASES.get(n, n)]: v for n, v in stats.items()}
+        if note:
+            notes[box] = note
+        else:
+            notes.pop(box, None)
+    notes_path.write_text(json.dumps(notes, sort_keys=True, indent=2) + "\n")
     target.write_text(json.dumps(updated, sort_keys=True, indent=2) + "\n")
 
 

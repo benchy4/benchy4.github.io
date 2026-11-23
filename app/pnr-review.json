@@ -1,0 +1,36 @@
+{
+  "2497248": {
+    "taggedPeriods": [
+      1
+    ]
+  },
+  "2497264": {
+    "boxScore": [
+      86,
+      69
+    ],
+    "exportScore": [
+      84,
+      71
+    ],
+    "scoreMismatch": true
+  },
+  "2497267": {
+    "taggedPeriods": [
+      1,
+      2,
+      3
+    ]
+  },
+  "2497268": {
+    "taggedPeriods": [
+      1
+    ]
+  },
+  "2497273": {
+    "taggedPeriods": [
+      1,
+      2
+    ]
+  }
+}
